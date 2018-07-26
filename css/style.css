@@ -1,3 +1,40 @@
+/* -------------------------------------------------------------------
+
+   FRONT-END OF THE CHECKOUT PROCESS - THIS IS THE CSS STYLE
+
+  [Table of contents]
+
+  01. General style
+  02. Progress Bar
+  03. Fieldsets
+  04. Basket 
+  05. SignIn 
+  06. Delivery 
+  07. Payment 
+  08. Confirmation
+  09. For mobile
+
+  [Typography]
+
+  # content    --> 'Open Sans', sans-serif;
+
+
+  [Notes]
+
+  # I included the javascript code from the progressbar which you can find it in js/progressbar.js
+
+  # You can find the javascript code from the basket. Basically, is calculating the total price and is updating live and you can see
+   the code for the animations. I added comments so the code can be understood better :)
+
+  # I didn't include everything in the mobile section but it works fine
+
+
+
+-------------------------------------------------------------------- */
+
+
+/*------------------------ 01. General style ------------------------*/
+
 @charset "utf-8";
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,600);
 
@@ -10,8 +47,6 @@
 
 html {
    height: 100%;
-   /*Image only BG fallback*/
-   /*background = gradient + image pattern combo*/
 }
 
 body {
@@ -28,187 +63,43 @@ main {
    width: 960px;
 }
 
+p {
+   margin: 0.75rem 0 0;
+}
+
+h1 {
+   font-size: 0.75rem;
+   font-weight: normal;
+   margin: 0;
+   padding: 0;
+}
+
+input,
+button {
+   border: 0 none;
+   outline: 0 none;
+}
+
+button {
+   background-color: #666;
+   color: #fff;
+}
+
+label {
+   display: block;
+   margin-bottom: 0.3125rem;
+}
+
 .container {
    width: 100%;
    margin-top: 5%;
 }
 
 
-/*form styles*/
-
-#msform {
-   width: 80%;
-   margin: 30px auto;
-   position: relative;
-}
-
-#msform fieldset {
-   background: white;
-   border: 0 none;
-   border-radius: 3px;
-   box-sizing: border-box;
-   width: 122%;
-   margin: 3% -10%;
-   /*stacking fieldsets above each other*/
-   position: relative;
-}
+/*------------------------ END OF 01. General style ------------------------*/
 
 
-/*Hide all except first fieldset*/
-
-#msform fieldset:not(:first-of-type) {
-   display: none;
-}
-
-
-/*buttons*/
-
-#msform .action-button {
-   width: 100px;
-   background: #27AE60;
-   font-weight: bold;
-   color: white;
-   border: 0 none;
-   border-radius: 1px;
-   cursor: pointer;
-   padding: 10px 5px;
-   margin: 10px 5px;
-}
-
-#msform .action-button:hover,
-#msform .action-button:focus {
-   box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
-}
-
-#msform .choose-delivery-button {
-   width: 19%;
-   height: 42px;
-   background: #00a100;
-   font-weight: bold;
-   color: white;
-   border: 0 none;
-   border-radius: 1px;
-   cursor: pointer;
-   padding: 10px 5px;
-   margin: 3px 81%;
-   font-size: 14px;
-}
-
-#msform .choose-delivery-button:hover,
-#msform .choose-delivery-button:focus {
-   box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
-}
-
-.continue-shopping {
-   float: left;
-   background-color: #00a100;
-   color: #fff;
-   padding: 10px 15px;
-   font-weight: bold;
-   border: 3px solid #00a100;
-   -webkit-transition: 0.3s ease;
-   transition: 0.3s ease;
-   cursor: pointer;
-   font-size: 14px;
-   text-align: center;
-   border-radius: 1px;
-   /* margin-bottom: 42px; */
-   margin-right: 7px;
-   margin-top: -45px;
-}
-
-#msform .top-choose-delivery-button {
-   width: 19%;
-   height: 42px;
-   background: #00a100;
-   font-weight: bold;
-   color: white;
-   border: 0 none;
-   border-radius: 1px;
-   cursor: pointer;
-   padding: 10px 5px;
-   margin: -51px 81%;
-   font-size: 14px;
-   margin-top: 9px;
-   float: left;
-}
-
-#msform .top-choose-delivery-button:hover,
-#msform .top-choose-delivery-button:focus {
-   box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
-}
-
-#msform .continue-as-guest {
-   width: 19%;
-   height: 42px;
-   background: #00a100;
-   font-weight: bold;
-   color: white;
-   border: 0 none;
-   border-radius: 1px;
-   cursor: pointer;
-   padding: 10px 5px;
-   margin: -51px 81%;
-   font-size: 14px;
-   float: left;
-   margin-top: -23%;
-   margin-left: 0%;
-}
-
-#msform .continue-as-guest:hover,
-#msform .continue-as-guest:focus {
-   box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
-}
-
-.signin-button {
-   float: right;
-   margin-top: 33%;
-   width: 9%;
-   margin-right: -9%;
-   display: block;
-   background: #00a100;
-   font-weight: bold;
-   color: white;
-   border: 0 none;
-   cursor: pointer;
-   padding: 10px 5px;
-   font-size: 14px;
-}
-
-.proceed-order {
-   float: right;
-   margin-top: 54%;
-   width: 19.5%;
-   margin-right: -41%;
-   display: block;
-   background: #00a100;
-   font-weight: bold;
-   color: white;
-   border: 0 none;
-   cursor: pointer;
-   padding: 10px 5px;
-   font-size: 14px;
-}
-
-
-/*headings*/
-
-.fs-title {
-   font-size: 15px;
-   text-transform: uppercase;
-   color: #2C3E50;
-   margin-bottom: 10px;
-}
-
-.fs-subtitle {
-   font-weight: normal;
-   font-size: 13px;
-   color: #666;
-   margin-bottom: 20px;
-}
-
-
-/*progressbar*/
+/*--------------------------- 02. Progressbar  -----------------------------*/
 
 #progressbar {
    margin-bottom: 30px;
@@ -248,7 +139,7 @@ main {
 }
 
 
-/*progressbar connectors*/
+/*---------------- PROGRESS BAR CONNECTORS ---------------*/
 
 #progressbar li:after {
    content: '';
@@ -268,15 +159,6 @@ main {
    content: none;
 }
 
-
-/*marking active/completed steps green*/
-
-
-/*The number of the step and the connector before it = green*/
-
-
-/* for the rounded stepts*/
-
 #progressbar li.active:before {
    background-color: #fff;
    color: #00a100;
@@ -288,37 +170,153 @@ main {
 }
 
 
-/* ---------------------------- HERE COMES THE BASKET CSS ---------------------- */
+/*------------------------ END OF 02. Progressbar ------------------------*/
 
-p {
-   margin: 0.75rem 0 0;
+
+/*--------------------------- 03. Fieldsets  -----------------------------*/
+
+
+/*FORM STYLES*/
+
+#msform {
+   width: 80%;
+   margin: 30px auto;
+   position: relative;
 }
 
-h1 {
-   font-size: 0.75rem;
-   font-weight: normal;
-   margin: 0;
-   padding: 0;
-}
 
-input,
-button {
+/*FIELDSETS*/
+
+#msform fieldset {
+   background: white;
    border: 0 none;
-   outline: 0 none;
+   border-radius: 3px;
+   box-sizing: border-box;
+   width: 122%;
+   margin: 3% -10%;
+   /*stacking fieldsets above each other*/
+   position: relative;
 }
 
-button {
-   background-color: #666;
-   color: #fff;
+
+/*Hide all except first fieldset*/
+
+#msform fieldset:not(:first-of-type) {
+   display: none;
 }
+
+
+/*BUTTONS*/
+
+#msform .action-button {
+   width: 100px;
+   background: #27AE60;
+   font-weight: bold;
+   color: white;
+   border: 0 none;
+   border-radius: 1px;
+   cursor: pointer;
+   padding: 10px 5px;
+   margin: 10px 5px;
+}
+
+#msform .action-button:hover,
+#msform .action-button:focus {
+   box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+}
+
+.continue-shopping {
+   float: left;
+   background-color: #00a100;
+   color: #fff;
+   padding: 10px 15px;
+   font-weight: bold;
+   border: 3px solid #00a100;
+   -webkit-transition: 0.3s ease;
+   transition: 0.3s ease;
+   cursor: pointer;
+   font-size: 14px;
+   text-align: center;
+   border-radius: 1px;
+   /* margin-bottom: 42px; */
+   margin-right: 7px;
+   margin-top: -45px;
+}
+
+.print {
+   float: right;
+   margin-top: 10%;
+   width: 21%;
+   margin-right: -68%;
+   display: block;
+   background: #00a100;
+   font-weight: bold;
+   border-radius: 1px;
+   color: white;
+   border: 0 none;
+   cursor: pointer;
+   padding: 10px 5px;
+   font-size: 14px;
+}
+
+.print:hover {
+   box-shadow: 0 0 0 2px white, 0 0 0 3px #00a100;
+}
+
+
+/*HEADINGS*/
+
+.fs-title {
+   font-size: 15px;
+   text-transform: uppercase;
+   color: #2C3E50;
+   margin-bottom: 10px;
+}
+
+.fs-subtitle {
+   font-weight: normal;
+   font-size: 13px;
+   color: #666;
+   margin-bottom: 20px;
+}
+
+
+/*------------------------ END OF 03. Fieldsets ------------------------*/
+
+
+/*---------------- 04. Basket Section - FIRST FIELDSET -----------------*/
+
+
+/*Top button - choose delivery*/
+
+#msform .top-choose-delivery-button {
+   width: 19%;
+   height: 42px;
+   background: #00a100;
+   font-weight: bold;
+   color: white;
+   border: 0 none;
+   border-radius: 1px;
+   cursor: pointer;
+   padding: 10px 5px;
+   margin: -51px 81%;
+   font-size: 14px;
+   margin-top: 9px;
+   float: left;
+}
+
+#msform .top-choose-delivery-button:hover,
+#msform .top-choose-delivery-button:focus {
+   box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+}
+
+
+/*General style from fieldset*/
 
 img,
 .basket-module,
 .basket-labels,
-.basket-product
-/*.promo-quote*/
-
-{
+.basket-product {
    width: 100%;
 }
 
@@ -326,9 +324,6 @@ button,
 .basket,
 .basket-module,
 .basket-labels,
-
-/*.promo-quote,*/
-
 .item,
 .price,
 .quantity,
@@ -339,29 +334,42 @@ button,
    float: left;
 }
 
-#login,
-#password,
-#firstname,
-#lastname,
-#line1,
-#companyname,
-#line2,
-#county,
-#postcode,
-#country,
-#email,
-#telmobile {
-   border: none;
-   height: 15px;
-   margin: 0;
-   outline: 0;
-   padding: 15px;
-   width: 66%;
-   border: 0.5px solid #ccc;
-   background-color: #ebebeb;
-   color: #8a97a0;
-   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
-   margin-bottom: 15px;
+
+/*Basket span items*/
+
+.summary-total-items {
+   color: #000;
+   font-size: 1.5em;
+   text-align: left;
+   font-weight: 800;
+   margin-top: 10px;
+}
+
+#summary-total-items-style {
+   font-size: 13px;
+   font-weight: 560;
+   float: left;
+   margin-top: 0px;
+}
+
+.basket-labels {
+   border-top: 1px solid #ccc;
+   border-bottom: 1px solid #ccc;
+   margin-top: 15px;
+}
+
+
+/*First li from ul*/
+
+.item {
+   width: 55%;
+}
+
+.item-heading {
+   padding-left: 0;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
 }
 
 .price:before,
@@ -372,6 +380,99 @@ button,
 .promo-title,
 .totals-value:before {
    content: '£';
+}
+
+.price,
+.quantity,
+.subtotal {
+   width: 15%;
+}
+
+.subtotal {
+   text-align: right;
+}
+
+
+/*Basket products*/
+
+.basket-product {
+   border-bottom: 1px solid #ccc;
+   padding: 40px 0px 85px;
+   position: relative;
+}
+
+.product-image {
+   width: 35%;
+}
+
+.product-details {
+   width: 65%;
+}
+
+.product-details {
+   padding: 0 1.5rem;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+.quantity-field {
+   background-color: #ccc;
+   border: 1px solid #aaa;
+   border-radius: 4px;
+   font-size: 0.625rem;
+   padding: 2px;
+   width: 3.75rem;
+}
+
+.remove {
+   bottom: 36px;
+   float: left;
+   position: absolute;
+   left: 6%;
+   text-align: left;
+   width: 45%;
+}
+
+.remove button {
+   background-color: transparent;
+   color: gray;
+   border-radius: 3px;
+   float: left;
+   width: 67px;
+   height: 21px;
+}
+
+.remove button:hover {
+   background-color: transparent;
+   color: red;
+   border-radius: 3px;
+   float: left;
+   width: 67px;
+   height: 21px;
+}
+
+.basket-empty {
+   display: block;
+   padding-top: 20px;
+}
+
+.empty-btn {
+   background-color: transparent;
+   color: black;
+   border-radius: 3px;
+   float: none;
+   width: 150px;
+   margin: 32px 0px 0px 0px;
+   height: 25px;
+   font-size: 17px;
+   font-weight: 700;
+}
+
+.empty-btn:hover,
+.empty-btn:focus {
+   background-color: transparent;
+   color: red;
 }
 
 .hide {
@@ -392,11 +493,6 @@ aside {
 
 .basket-module {
    color: #111;
-}
-
-label {
-   display: block;
-   margin-bottom: 0.3125rem;
 }
 
 #label-for-promocode {
@@ -439,6 +535,11 @@ label {
    padding: 0.6875rem 1.25rem 0.625rem;
 }
 
+.promo-code-cta:hover {
+   background-color: red;
+   color: white;
+}
+
 .quote-div {
    float: right;
    margin-bottom: 42px;
@@ -463,233 +564,6 @@ label {
    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
    -o-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
-}
-
-.basket-labels {
-   border-top: 1px solid #ccc;
-   border-bottom: 1px solid #ccc;
-   margin-top: 15px;
-}
-
-.delivery-labels {
-   border-bottom: 1.5px solid #ccc;
-   margin-top: 15px;
-}
-
-.delivery-button {
-   float: right;
-   background-color: #00a100;
-   color: #fff;
-   padding: 10px 15px;
-   border-radius: 0px;
-   text-transform: uppercase;
-   font-weight: 900;
-   border: 3px solid #00a100;
-   -webkit-transition: 0.3s ease;
-   transition: 0.3s ease;
-   cursor: pointer;
-   text-align: center;
-   margin-bottom: 42px;
-   margin-top: -21px;
-}
-
-.register-button {
-   float: left;
-   width: 40%;
-   background-color: #656565;
-   color: #fff;
-   padding: 10px 15px;
-   border-radius: 0px;
-   font-weight: bold;
-   border: 3px solid #656565;
-   -webkit-transition: 0.3s ease;
-   transition: 0.3s ease;
-   cursor: pointer;
-   text-align: center;
-   border-radius: 1px;
-}
-
-.register-button:hover {
-   background-color: #888888;
-}
-
-.shopping-button {
-   float: left;
-   background-color: #656565;
-   color: #fff;
-   padding: 10px 15px;
-   border-radius: 0px;
-   font-weight: bold;
-   border: 3px solid #656565;
-   -webkit-transition: 0.3s ease;
-   transition: 0.3s ease;
-   cursor: pointer;
-   text-align: center;
-   border-radius: 1px;
-   margin-bottom: 42px;
-   margin-top: -45px;
-   margin-right: 8px;
-}
-
-.shopping-button:hover,
-.shopping-button:focus {
-   box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
-}
-
-.basket-empty {
-   display: block;
-   padding-top: 20px;
-}
-
-ul {
-   list-style: none;
-   margin: 0;
-   padding: 0;
-}
-
-li {
-   color: #111;
-   display: inline-block;
-   padding: 0.625rem 0;
-}
-
-li.price:before,
-li.subtotal:before {
-   content: '';
-}
-
-.item {
-   width: 55%;
-}
-
-.choose-country {
-   width: 20%;
-}
-
-.choose-country-heading {
-   padding-left: 0;
-   -webkit-box-sizing: border-box;
-   -moz-box-sizing: border-box;
-   box-sizing: border-box;
-}
-
-.selectlist {
-   width: 20%;
-}
-
-.delivery-price {
-   width: 8%;
-}
-
-.order-summary {
-   width: 30%;
-}
-
-.price,
-.quantity,
-.subtotal {
-   width: 15%;
-}
-
-.subtotal {
-   text-align: right;
-}
-
-.remove {
-   bottom: 36px;
-   float: left;
-   position: absolute;
-   left: 6%;
-   text-align: left;
-   width: 45%;
-}
-
-.remove button {
-   background-color: transparent;
-   color: gray;
-   border-radius: 3px;
-   float: left;
-   width: 67px;
-   height: 21px;
-}
-
-.remove button:hover {
-   background-color: transparent;
-   color: red;
-   border-radius: 3px;
-   float: left;
-   width: 67px;
-   height: 21px;
-}
-
-
-.item-heading {
-   padding-left: 0;
-   -webkit-box-sizing: border-box;
-   -moz-box-sizing: border-box;
-   box-sizing: border-box;
-}
-
-.basket-product {
-   border-bottom: 1px solid #ccc;
-   padding: 40px 0px 85px;
-   position: relative;
-}
-
-.product-image {
-   width: 35%;
-}
-
-.product-details {
-   width: 65%;
-}
-
-.product-details {
-   padding: 0 1.5rem;
-   -webkit-box-sizing: border-box;
-   -moz-box-sizing: border-box;
-   box-sizing: border-box;
-}
-
-.quantity-field {
-   background-color: #ccc;
-   border: 1px solid #aaa;
-   border-radius: 4px;
-   font-size: 0.625rem;
-   padding: 2px;
-   width: 3.75rem;
-}
-
-aside {
-   float: right;
-   position: relative;
-   width: 30%;
-}
-
-.summary {
-   background-color: #eee;
-   border: 1px solid #aaa;
-   padding: 1rem;
-   position: fixed;
-   width: 250px;
-   -webkit-box-sizing: border-box;
-   -moz-box-sizing: border-box;
-   box-sizing: border-box;
-}
-
-.summary-total-items {
-   color: #000;
-   font-size: 1.5em;
-   text-align: left;
-   font-weight: 800;
-   margin-top: 10px;
-}
-
-#summary-total-items-style {
-   font-size: 13px;
-   font-weight: 560;
-   float: left;
-   margin-top: 0px;
 }
 
 .summary-subtotal {
@@ -759,22 +633,17 @@ aside {
    color: red;
 }
 
-.empty-btn {
-   background-color: transparent;
-   color: black;
-   border-radius: 3px;
-   float: none;
-   width: 150px;
-   margin: 32px 0px 0px 0px;
-   height: 25px;
-   font-size: 17px;
-   font-weight: 700;
+.subtotal-value,
+.total-value {
+   text-align: right;
+   font-size: 15px;
+   font-weight: 800;
 }
 
-.empty-btn:hover,
-.empty-btn:focus {
-   background-color: transparent;
-   color: red;
+.totals-value {
+   text-align: right;
+   font-size: 15px;
+   font-weight: 800;
 }
 
 .summary-promo {
@@ -796,49 +665,71 @@ aside {
    width: 30%;
 }
 
-.summary-delivery {
-   padding-bottom: 3rem;
-}
-
-.subtotal-value,
-.total-value {
-   text-align: right;
-   font-size: 15px;
-   font-weight: 800;
-}
-
-.totals-value {
-   text-align: right;
-   font-size: 15px;
-   font-weight: 800;
-}
-
-.summary-checkout {
-   display: block;
-}
-
-.checkout-cta {
-   display: block;
-   float: none;
-   font-size: 0.75rem;
-   text-align: center;
-   text-transform: uppercase;
-   padding: 0.625rem 0;
-   width: 100%;
-}
-
-.summary-delivery-selection {
-   background-color: #ccc;
+.summary {
+   background-color: #eee;
    border: 1px solid #aaa;
-   border-radius: 4px;
-   display: block;
-   font-size: 0.625rem;
-   height: 34px;
-   width: 100%;
+   padding: 1rem;
+   position: fixed;
+   width: 250px;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
 }
 
 
-/* ------------ SECOND PAGE - SIGN IN ------------ */
+/*------ BOTTOM BUTTON - Choose Delivery ---------*/
+
+#msform .choose-delivery-button {
+   width: 19%;
+   height: 42px;
+   background: #00a100;
+   font-weight: bold;
+   color: white;
+   border: 0 none;
+   border-radius: 1px;
+   cursor: pointer;
+   float: right;
+   padding: 10px 5px;
+   margin: 35px -39%;
+   font-size: 14px;
+}
+
+#msform .choose-delivery-button:hover,
+#msform .choose-delivery-button:focus {
+   box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+}
+
+
+/*--------CONTINUE SHOPPING BUTTON BOTTOM -----------*/
+
+.shopping-button {
+   float: left;
+   background-color: #656565;
+   color: #fff;
+   padding: 10px 15px;
+   border-radius: 0px;
+   font-weight: bold;
+   border: 3px solid #656565;
+   -webkit-transition: 0.3s ease;
+   transition: 0.3s ease;
+   cursor: pointer;
+   text-align: center;
+   border-radius: 1px;
+   margin-bottom: 42px;
+   margin-top: 35px;
+   margin-right: 8px;
+}
+
+.shopping-button:hover,
+.shopping-button:focus {
+   box-shadow: 0 0 0 2px white, 0 0 0 3px #656565;
+}
+
+
+/*------------------------ END OF 04. Basket ------------------------*/
+
+
+/*---------------- 05. SignIn Section - SECOND FIELDSET -----------------*/
 
 .signup {
    float: left;
@@ -884,8 +775,163 @@ aside {
    float: right;
 }
 
+.register-button {
+   float: left;
+   width: 40%;
+   background-color: #656565;
+   color: #fff;
+   padding: 10px 15px;
+   border-radius: 0px;
+   font-weight: bold;
+   border: 3px solid #656565;
+   -webkit-transition: 0.3s ease;
+   transition: 0.3s ease;
+   cursor: pointer;
+   text-align: center;
+   border-radius: 1px;
+}
 
-/* -------------------- DELIVERY PART --------------- */
+.register-button:hover {
+   box-shadow: 0 0 0 2px white, 0 0 0 3px #656565;
+}
+
+
+/*-------- THIS IS FOR SIGNIN & PAYMENT SECTION ---------*/
+
+#login,
+#password,
+#firstname,
+#lastname,
+#line1,
+#companyname,
+#line2,
+#county,
+#postcode,
+#country,
+#email,
+#telmobile {
+   border: none;
+   height: 15px;
+   margin: 0;
+   outline: 0;
+   padding: 15px;
+   width: 66%;
+   border: 0.5px solid #ccc;
+   background-color: #ebebeb;
+   color: #8a97a0;
+   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+   margin-bottom: 15px;
+}
+
+.signin-button {
+   float: right;
+   margin-top: 33%;
+   width: 9%;
+   margin-right: -9%;
+   display: block;
+   background: #00a100;
+   font-weight: bold;
+   border-radius: 1px;
+   color: white;
+   border: 0 none;
+   cursor: pointer;
+   padding: 10px 5px;
+   font-size: 14px;
+}
+
+.signin-button:hover {
+   box-shadow: 0 0 0 2px white, 0 0 0 3px #00a100;
+}
+
+#msform .continue-as-guest {
+   width: 19%;
+   height: 42px;
+   background: #00a100;
+   font-weight: bold;
+   color: white;
+   border: 0 none;
+   border-radius: 1px;
+   cursor: pointer;
+   padding: 10px 5px;
+   margin: -51px 81%;
+   font-size: 14px;
+   float: left;
+   margin-top: -23%;
+   margin-left: 0%;
+}
+
+#msform .continue-as-guest:hover,
+#msform .continue-as-guest:focus {
+   box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+}
+
+
+/*------------------------ END OF 05. SignIn ------------------------*/
+
+
+/*---------------- 06. Delivery Section - THIRD FIELDSET -----------------*/
+
+.delivery-labels {
+   border-bottom: 1.5px solid #ccc;
+   margin-top: 15px;
+}
+
+.delivery-button {
+   float: right;
+   background-color: #00a100;
+   color: #fff;
+   padding: 10px 15px;
+   border-radius: 0px;
+   text-transform: uppercase;
+   font-weight: 900;
+   border: 3px solid #00a100;
+   -webkit-transition: 0.3s ease;
+   transition: 0.3s ease;
+   cursor: pointer;
+   text-align: center;
+   margin-bottom: 42px;
+   margin-top: -21px;
+}
+
+ul {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+}
+
+li {
+   color: #111;
+   display: inline-block;
+   padding: 0.625rem 0;
+}
+
+li.price:before,
+li.subtotal:before {
+   content: '';
+}
+
+.choose-country {
+   width: 20%;
+}
+
+.choose-country-heading {
+   padding-left: 0;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+.selectlist {
+   width: 20%;
+}
+
+.delivery-price {
+   width: 8%;
+}
+
+.order-summary {
+   width: 30%;
+}
 
 .flex-3-cols {
    width: 67%;
@@ -1211,8 +1257,28 @@ aside {
    color: black;
 }
 
+#msform .proceed-to-payment {
+   font-size: 14px;
+   width: 19%;
+   height: 42px;
+   background: #00a100;
+   font-weight: bold;
+   color: white;
+   border: 0 none;
+   border-radius: 1px;
+   cursor: pointer;
+   padding: 10px 5px;
+   font-size: 14px;
+   float: right;
+   margin-left: -38%;
+   margin-top: 34%;
+   display: block;
+}
 
-/* ----------------- PAYMENT PART ---------------- */
+#msform .proceed-to-payment:hover,
+#msform .proceed-to-payment:focus {
+   box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+}
 
 #back-to-cart-id {
    width: 19%;
@@ -1226,16 +1292,44 @@ aside {
    padding: 10px 5px;
    font-size: 14px;
    float: left;
-   margin-left: 0%;
-   margin-top: -5%;
+   margin-left: -38%;
+   margin-top: 34%;
    display: block;
 }
 
+#back-to-cart-id:hover {
+   box-shadow: 0 0 0 2px white, 0 0 0 3px #656565;
+}
+
+
+/*------------------------ END OF 06. Delivery ------------------------*/
+
+
+/*---------------- 07. Payment Section - FOURTH FIELDSET -----------------*/
+
+.left-side {
+   width: 50%;
+   float: left;
+}
+
+.right-side {
+   width: 38%;
+   float: right;
+   text-align: right;
+   font-size: 14px;
+   font-weight: 550;
+}
+
 #delivery-address-header,
-#order-totals-header {
+#order-totals-header,
+#order-confirmation {
    font-weight: bold;
    color: black;
    margin-bottom: 5%;
+}
+
+#order-text {
+   font-size: 14px;
 }
 
 .first-name {
@@ -1323,6 +1417,106 @@ aside {
    float: left;
    margin-bottom: 5%;
    font-weight: 700;
+}
+
+.proceed-order {
+   float: right;
+   margin-top: 54%;
+   width: 19.5%;
+   margin-right: -41%;
+   display: block;
+   background: #00a100;
+   font-weight: bold;
+   color: white;
+   border-radius: 1px;
+   border: 0 none;
+   cursor: pointer;
+   padding: 10px 5px;
+   font-size: 14px;
+}
+
+.proceed-order:hover {
+   box-shadow: 0 0 0 2px white, 0 0 0 3px #00a100;
+}
+
+
+/*------------------------ END OF 07. Payment ------------------------*/
+
+
+/*---------------- 08. Confirmation Section - FIFTH FIELDSET -----------------*/
+
+.confirmation-basket-labels {
+   margin-top: 5%;
+   width: 100%;
+   float: left;
+   border-bottom: 1px solid #ccc;
+   margin-top: 15px;
+}
+
+.confirmation-basket-product {
+   width: 100%;
+   float: left;
+   border-bottom: 1px solid #ccc;
+   padding: 40px 0px 35px;
+   position: relative;
+}
+
+.confirmation-product-details {
+   float: left;
+   padding: 0 1.5rem;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+   width: 60%;
+}
+
+.order-summary-total {
+   width: 100%;
+   margin-top: 1%;
+}
+
+.myorder {
+   width: 55%;
+   float: left;
+}
+
+.myorder-heading {
+   padding-left: 0;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+.myorder-quantity {
+   width: 15%;
+   float: left;
+}
+
+.line-total {
+   width: 15%;
+   float: right;
+}
+
+#line-total-p {
+   font-size: 15px;
+   margin-left: 20px;
+}
+
+#quantity-id {
+   margin-left: 24px;
+   font-size: 15px;
+}
+
+
+/*------------------------ END OF 08. Confirmation ------------------------*/
+
+
+/*---------------- FOR MOBILES -----------------*/
+
+aside {
+   float: right;
+   position: relative;
+   width: 30%;
 }
 
 @media screen and (max-width: 640px) {
