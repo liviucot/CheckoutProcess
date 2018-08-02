@@ -1,4 +1,3 @@
-//jQuery time
 var current_fs, next_fs, previous_fs; //fieldsets
 var left, opacity, scale; //fieldset properties which we will animate
 var animating; //flag to prevent quick multi-click glitches
@@ -113,25 +112,16 @@ $(".submit").click(function () {
    return false;
 });
 
-function increaseValue() {
-   var value = parseInt(document.getElementById('number').value, 10);
-   value = isNaN(value) ? 0 : value;
-   value++;
-   document.getElementById('number').value = value;
-}
 
-function decreaseValue() {
-   var value = parseInt(document.getElementById('number').value, 10);
-   value = isNaN(value) ? 0 : value;
-   value < 1 ? value = 1 : '';
-   value--;
-   document.getElementById('number').value = value;
-}
+// ------------ THIS IS FOR THE DELIVERY SECTION WHEN YOU COOSE A COUNTRY --------------
 
 function changeCountry(element) {
    var text = element.options[element.selectedIndex].text;
    document.getElementById("displayCountry").innerHTML = text;
 }
+
+
+// ------------ THIS IS FOR THE DELIVERY SECTION WHEN YOU CHANGE THE DELIVERY OPTION --------------
 
 
 $('#delivery-option1').on('change', function () {
