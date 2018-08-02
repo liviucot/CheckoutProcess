@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Checkout Process</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/progressbar.css">
+    <link rel="stylesheet" type="text/css" href="css/basket.css">
+    <link rel="stylesheet" type="text/css" href="css/signin.css">
+    <link rel="stylesheet" type="text/css" href="css/delivery.css">
+    <link rel="stylesheet" type="text/css" href="css/payment.css">
+    <link rel="stylesheet" type="text/css" href="css/confirmation.css">
+    <link rel="stylesheet" type="text/css" href="css/mobile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <main>
+      <!---------------- MULTISTEP FORM ------------------->
+      <div id="msform">
+        <!---------------PROGRESS BAR ----------->
+        <ul id="progressbar">
+          <li class="active">Basket</li>
+          <li>Sign In</li>
+          <li>Delivery</li>
+          <li>Payment</li>
+          <li>Confirmation</li>
+        </ul>
+        <!--------------- FIELDSETS --------------->
+        <fieldset>
+          <!------------- HERE COMES THE CONTENT OF THE BASKET ------------->
+          <input type="button" name="next" class="next top-choose-delivery-button" style="" value="Choose Delivery" />
+          <div class="basket" style="margin-top: 15px">
+            <div class="summary-total-items">Basket - <span class="total-items"></span> items</div>
+          </div>
+          <div class="basket-labels">
+            <ul>
+              <li class="item item-heading">Item</li>
+              <li class="price">Price</li>
+              <li class="quantity">Quantity</li>
+              <li class="subtotal">Subtotal</li>
+            </ul>
+          </div>
+          <div class="basket-product">
+            <div class="item">
+              <div class="product-image">
+                <img src="img/pants.png" alt="Placholder Image 2" class="product-frame">
+              </div>
+              <div class="product-details">
+                <h1 id="media-title"><strong><span class="item-quantity">1</span> x Nike Libero Obsidian / White Woven Pant Cuffed</strong></h1>
+                <p>Size: Large Mens - 33/35</p>
+                <p>Product Code: 588458451L</p>
+              </div>
+            </div>
+            <div class="mobile-price">Price</div>
+            <div class="mobile-quantity">Quantity</div>
+            <div class="mobile-subtotal">Subtotal</div>
+            <div class="price">22.46</div>
+            <div class="quantity">
+              <div class="dec button" id="value-button">-</div>
+              <input type="number" name="qty" class="input-number" id="number" value="1" min="0"/>
+              <div class="inc button" id="value-button">+</div>
+              <p id="update-btn">Update</p>
+            </div>
+            <div class="subtotal">22.46</div>
+            <div class="remove"> 
+              <button><i class="fa fa-times-circle" aria-hidden="true"></i> Remove</button>
+            </div>
+          </div>
+          <div class="basket-product">
+            <div class="item">
+              <div class="product-image">
+                <img src="img/football.png" alt="Placholder Image 2" class="product-frame">
+              </div>
+              <div class="product-details">
+                <h1 id="media-title"><strong><span class="item-quantity">2</span> x Nike Team Training Football</strong></h1>
+                <p>Size: 3</p>
+                <p>Product Code: SC19111173</p>
+              </div>
+            </div>
+            <div class="mobile-price">Price</div>
+            <div class="mobile-quantity">Quantity</div>
+            <div class="mobile-subtotal">Subtotal</div>
+            <div class="price">5.99</div>
+            <div class="quantity">
+              <div class="dec button" id="value-button">-</div>
+              <input type="number" name="qty" class="input-number" id="number" value="2" min="0" />
+              <div class="inc button" id="value-button">+</div>
+              <p id="update-btn">Update</p>
+            </div>
+            <div class="subtotal">11.98</div>
+            <div class="remove">
+              <button><i class="fa fa-times-circle" aria-hidden="true" ></i> Remove</button>
+            </div>
+          </div>
+          <div class="basket-product">
+            <div class="item">
+              <div class="product-image">
+                <img src="img/backpack.png" alt="Placholder Image 2" class="product-frame">
+              </div>
+              <div class="product-details">
+                <h1 id="media-title"><strong><span class="item-quantity">1</span> x Nike Youth Backpack</strong></h1>
+                <p>Size: 22L</p>
+                <p>Product Code: BA5773010MISC</p>
+              </div>
+            </div>
+            <div class="mobile-price">Price</div>
+            <div class="mobile-quantity">Quantity</div>
+            <div class="mobile-subtotal">Subtotal</div>
+            <div class="price">16.46</div>
+            <div class="quantity">
+              <div class="dec button" id="value-button">-</div>
+              <input type="number" name="qty" class="input-number" id="number" value="1" min="0" />
+              <div class="inc button" id="value-button">+</div>
+              <p id="update-btn">Update</p>
+            </div>
+            <div class="subtotal">16.46</div>
+            <div class="remove">
+              <button><i class="fa fa-times-circle" aria-hidden="true"></i> Remove</button>
+            </div>
+          </div>
+          <br><br><br>
+          <div class="basket-empty">
+            <button class="empty-btn"><i class="fa fa-shopping-basket"></i> Empty Basket</button>
+          </div>
+          <br><br>
+          <div class="basket-module">
+          </div>
+          <div class="summary-total-items">
+            <label for="promo-code" id="label-for-promocode">Promotional code</label>
+            <input id="promo-code" type="text" name="promo-code" maxlength="5" class="promo-code-field">
+            <button class="promo-code-cta">Apply</button>
+            <div class="quote-div">
+              <label for="quote-ref" id="quote-ref-heading">Order/Quote Reference</label>
+              <input id="quote-ref" type="text" name="quote-ref"  maxlength="15" class="quote-field"> 
+            </div>
+          </div>
+          <div class="summary-subtotal">
+            <div class="subtotal-title">Subtotal</div>
+            <div class="subtotal-value final-value" id="basket-subtotal">50.90</div>
+            <div class="summary-promo hide">
+              <div class="promo-title">Promotion</div>
+              <div class="promo-value final-value" id="basket-promo"></div>
+            </div>
+          </div>
+          <div class="totals-item">
+            <div class="total-title">Excluding VAT</div>
+            <div class="totals-value" id="cart-tax">40.72
+            </div>
+            <br><br><br>
+            <div class="summary-total" style="">
+              <div class="total-title">Total</div>
+              <div class="total-value final-value" id="basket-total">50.90</div>
+            </div>
+          </div>
+          <!------------- NEXT BUTTON ------------->
+          <input type="button" name="next" class="next choose-delivery-button" value="Choose Delivery" />
+          <button class="shopping-button">Continue Shopping</button>
+          <button class="shopping-button">Save Quote</button>
+        </fieldset>
+        <fieldset>
+          <div class="container">
+            <div class="signup">
+              <h2 id="signup-title">New Customers</h2>
+              <p id="signup-description">Proceed to checkout and you will have an opportunity to create an account at the end if one does not already exist for you.</p>
+              <br><br>
+              <button class="register-button">Register</button>
+            </div>
+            <div class="signin">
+              <h2 id="signin-title">Returning Customers</h2>
+              <p id="signin-description">Sign in to speed up the checkout process and save payments to account.</p>
+              <br><br>
+              <!------------------------ AM RAMAS AICI ---------------->
+              <label for="text" id="text-label">Email: <strong>required</strong></label>
+              <input type="text" id="login"  placeholder="example@gmail.com"/>
+              <label for="password" id="pass-label"> Password: <strong>required</strong></label>
+              <input type="password" id="password" placeholder="******"/>
+              <label class="container-checkbox">Remember me
+              <input type="checkbox">
+              <span class="checkmark"></span>
+              </label>
+              <a href="#" id="forgot">Forgot Your Password ?</a>
+            </div>
+          </div>
+          <!----------------- BUTTONS ---------------------->
+          <input type="button" name="next" class="next signin-button" value="Sign In">
+          <button class="next continue-as-guest">Continue as Guest</button>
+        </fieldset>
+        <fieldset>
+          <div class="delivery-labels">
+            <ul>
+              <li class="choose-country choose-country-heading">Choose Country</li>
+              <li class="selectlist" style="margin-left: 5%;">
+                <select id="select-country" onchange="changeCountry(this)">
+                  <option value="uk" active>UK Mainland Only</option>
+                  <option value="northern">Northern Ireland</option>
+                  <option value="islewight">Isle of Wight</option>
+                  <option value="isleman">Isle of Man</option>
+                </select>
+              </li>
+              <li class="delivery-price">Price</li>
+              <li class="order-summary">
+                <h2 id="summary-title-delivery" style=" margin-left: 16%; font-size: 16px; font-weight: 800;">Order Summary</h2>
+              </li>
+            </ul>
+          </div>
+          <div class="flex-3-cols">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+            <!--------------------- LABEL FOR DPD DELIVERY -------------->
+            <label id="delivery-option1-label" for="delivery-option1">
+              <div class="radio-logo" data-doc="1">
+                <input type="radio" class="radio-button1" name="radio-change" value="" checked="checked" id="delivery-option1"/>
+                <h3 id="option1-heading">Next Working Day</h3>
+                <img src="img/dpd.png" style="width: 70%;" alt="DPD Logo"/>
+              </div>
+              <div class="text-delivery-option1">
+                <ul class="description-delivery-option1">
+                  <li id="line1-option1">For parcel delivery in the UK before close of business the following working day from date of dispatch</li>
+                  <li id="line2-option1">Track your order online</li>
+                  <li id="line3-option1"> MOST POPULAR </li>
+                </ul>
+              </div>
+              <div class="price-option1" style="float: left; width: 10%; margin-left:10%; font-weight: 600;">
+                <h3>£9.99</h3>
+              </div>
+            </label>
+            <!--------------------- END LABEL FOR DPD DELIVERY -------------->
+            <!--------------------- LABEL FOR TNT DELIVERY -------------->
+            <label id="delivery-option2-label" for="delivery-option2">
+              <div class="radio-logo" data-doc="2">
+                <input type="radio" class="radio-button2" name="radio-change" value="" id="delivery-option2" />
+                <h3 id="option2-heading">2-4 Day Delivery</h3>
+                <img id="option2-img" src="img/tnt.png" alt="TNT Logo"/>
+              </div>
+              <div class="text-delivery-option2" style="">
+                <ul class="description-delivery-option2">
+                  <li id="line1-option2">Track your order online</li>
+                  <li id="line2-option2">Delivery on the next possible business day from the date of dispatch </li>
+                </ul>
+              </div>
+              <div class="price-option2">
+                <h3>£6.99</h3>
+              </div>
+            </label>
+            <!--------------------- END LABEL FOR TNT DELIVERY -------------->
+            <!--------------------- LABEL FOR MyHERMES DELIVERY -------------->
+            <label id="delivery-option3-label" for="delivery-option3">
+              <div class="radio-logo" data-doc="3">
+                <input type="radio" class="radio-button3" name="radio-change" value="" id="delivery-option3" />
+                <h3 id="option3-heading">5-7 Day Delivery</h3>
+                <img id="option3-img" src="img/myhermes.png" alt="MYHERMES Logo"/>
+              </div>
+              <div class="text-delivery-option3">
+                <ul class="description-delivery-option3">
+                  <li id="line1-option3">Parcel tracking available</li>
+                </ul>
+              </div>
+              <div class="price-option3">
+                <h3>£3.99</h3>
+              </div>
+            </label>
+            <!--------------------- END LABEL FOR myHERMES DELIVERY -------------->
+            <!--------------------- LABEL FOR Season Ticket DELIVERY -------------->
+            <label id="delivery-option4-label" for="delivery-option4" style="display: inline-block; padding: 0px 0 12px 35px;">
+              <div class="top-bar">
+                <h3>YOU QUALIFY FOR FREE DELIVERY</h3>
+              </div>
+              <div class="radio-logo" data-doc="4">
+                <input type="radio" class="radio-button4" name="radio-change" value="" id="delivery-option4"/>
+                <h3 id="option4-heading">Free Delivery</h3>
+              </div>
+              <div class="text-delivery-option4">
+                <ul class="description-delivery-option4">
+                  <li id="line1-option4">Free delivery to all UK mainland addresses, when you spend £99
+                  </li>
+                </ul>
+              </div>
+              <div class="price-option4">
+                <h3>FREE</h3>
+              </div>
+            </label>
+            <!--------------------- END LABEL FOR Season Ticket DELIVERY -------------->
+            <!--------------------- LABEL FOR Season Ticket DELIVERY -------------->
+            <label id="delivery-option5-label" for="delivery-option5">
+              <div class="radio-logo" data-doc="5">
+                <input type="radio" class="radio-button5" name="radio-change" value="" id="delivery-option5"/>
+                <h3 id="option5-heading">Season Ticket Delivery Pass</h3>
+                <img id="option5-img" src="img/season.png" alt="Season Logo"/>
+              </div>
+              <div class="text-delivery-option5">
+                <ul class="description-delivery-option5">
+                  <li id="line1-option5">12 months with no delivery charge on shipping
+                  </li>
+                  <li id="line2-option5">Allowing you to save money on each purchase</li>
+                </ul>
+              </div>
+              <div class="price-option5">
+                <h3>£24.99</h3>
+              </div>
+            </label>
+          </div>
+          <!--------------------- END LABEL FOR Season Ticket DELIVERY -------------->
+          <div class="mobile-order-title">Order Summary</div>
+          <br>
+          <div class="order-summary" id="order-summary-title">
+            <div class="count-items">
+              <div class="summary-total-items" id="summary-total-items-style"><span class="total-items"></span> items</div>
+              <span id="order-summary-total">£50.90</span>
+            </div>
+            <div class="delivery-total">
+              <h id="delivery-header">Delivery</h>
+              <div class="shipping_price" style="float: right;">£9.99</div>
+            </div>
+            <div id="displayCountry">UK Mainland Only</div>
+            <div class="final-order-total">
+              <h id="total-order-header">ORDER TOTAL</h>
+              <span id="order-final-total">£60.89</span>
+            </div>
+            <div class="exclude-vat">
+              <h id="vat-header">Excluding VAT:</h>
+              <div class="totals-value" id="excluding-vat">50.74</div>
+            </div>
+            <div class="exclude-vat">
+              <h id="saving-header">You are saving:</h>
+              <div class="saving">£24.95</div>
+            </div>
+          </div>
+          <div class="dpd-video">
+            <h3 id="dpd-text"><strong>*All delivery times from date of dispatch</strong></h3>
+            <br>
+            <h3 id="dpd-text">Why Choose DPD?</h3>
+            <br>
+            <iframe id="dpd-youtube" width="360" height="208" src="https://www.youtube.com/embed/JqJgwVOp2xQ?showinfo=0&amp;start=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+          <br>
+          <!------------- NEXT BUTTON ------------->
+          <input type="button" name="next" class="next proceed-to-payment" value="Proceed to Payment" />
+          <input type="button" name="previous" class="previous back-to-cart" value="Back to Cart" id="back-to-cart-id"/>
+        </fieldset>
+        <fieldset>
+          <div class="container">
+            <div class="signup">
+              <h2 id="delivery-address-header">Delivery Address</h2>
+              <div class="first-name" style="">
+                <label for="firstname">First Name</label>
+                <input type="text" id="firstname">
+              </div>
+              <div class="last-name">
+                <label for="lastname" style="margin-left: -15%;">Last Name</label>
+                <input type="text" id="lastname">
+              </div>
+              <div class="company-name">
+                <label for="companyname">Football Club/ Company Name</label>
+                <input type="text" id="companyname">
+              </div>
+              <div class="line-1">
+                <label for="line1">Line 1</label>
+                <input type="text" id="line1">
+              </div>
+              <div class="line-2">
+                <label for="line2">Line 2</label>
+                <input type="text" id="line2">
+              </div>
+              <div class="county">
+                <label for="county">County</label>
+                <input type="text" id="county">
+              </div>
+              <div class="post-code">
+                <label for="postcode">Postcode</label>
+                <input type="text" id="postcode">
+              </div>
+              <div class="country">
+                <label for="country">Country</label>
+                <input type="text" id="country">
+              </div>
+              <div class="email">
+                <label for="email">Email Address</label>
+                <input type="text" id="email">
+              </div>
+              <div class="tel-mobile">
+                <label for="telmobile">Tel/Mobile</label>
+                <input type="text" id="telmobile">
+              </div>
+            </div>
+            <div class="signin" id="order-totals-id">
+              <h2 id="order-totals-header">Order Totals</h2>
+              <div class="totals-order">
+                <div class="count-items">
+                  <div class="summary-total-items" id="summary-total-items-style"><span class="total-items"></span> items</div>
+                  <span id="order-summary-total">£50.90</span>
+                </div>
+                <div class="delivery-total">
+                  <h id="delivery-header">Delivery</h>
+                  <div class="shipping_price" style="float: right;">£9.99</div>
+                </div>
+                <div id="displayCountry">UK Mainland Only</div>
+                <div class="final-order-total">
+                  <h id="total-order-header">ORDER TOTAL</h>
+                  <span id="order-final-total">£60.89</span>
+                </div>
+                <div class="exclude-vat">
+                  <h id="vat-header">Excluding VAT:</h>
+                  <div class="totals-value" id="excluding-vat">50.74</div>
+                </div>
+                <div class="exclude-vat">
+                  <h id="saving-header">You are saving:</h>
+                  <div class="saving">£24.95</div>
+                </div>
+                <div class="select-payment" style="margin-bottom: 5%; margin-top: 5%;">
+                  <h id="payment-method">Select Payment Method *</h>
+                  <img src="img/pay.png">
+                </div>
+                <div class="payment-radio-buttons">
+                  <input type="radio" name="card" value="card"> Credit/Debit Card Payment<br>
+                  <input type="radio" name="card" value="cheque"> Cheque Payment<br>
+                  <input type="radio" name="card" value="purchase"> Purchase Order<br>
+                  <input type="radio" name="card" value="banktransfer"> Bank Transfer
+                </div>
+                <div class="order-note">
+                  <label for="order-note">Order Note</label>
+                  <textarea rows="7" cols="50" id="order-note"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!----------------- BUTTONS ---------------------->
+          <input type="button" name="next" class="next proceed-order" value="Proceed with Order">
+        </fieldset>
+        <fieldset>
+          <div id="dialogoverlay"></div>
+          <div id="dialogbox">
+            <button id="close-popup" onclick="newAlert.ok()"><i class="fa fa-times" style="margin-top: 8px; margin-right: 7px;"></i></button>
+            <div id="dialogbox-head">
+              <div class="save-text">
+                <h2 id="saved-text"> YOU SAVED $24.29</h2>
+                <p id="popup-description"> We'll get started on your order right away. You should receive an order confirmation email shortly. If you have any questions call us at 08456 42 1966.</p>
+              </div>
+              <div class="box-text">
+                <h2 id="tellworld"><span id="tellworld-span">Tell the world</span></h2>
+                <h2 id="share-text">We're delighted when our customers tell their family & friends about the savings they've made at Discount Football Kits. Share the message below, and we'll send you a surprise gift!</h2>
+                <textarea id="myTextarea" readonly>I have just saved $24.95 shopping with the UK's leading teamwear specialist - discountfootballkits.com. Why not take a look at their great products & prices! #MyDFK http://discountfootballkits.com</textarea>
+                <div class="dialog-social">
+                  <div id="share">
+                    <h2 id="share-header"> Share with friends:</h2>
+                  </div>
+                  <div id="facebook">
+                    <button id="facebook-button">FACEBOOK</button>
+                  </div>
+                  <div id="twitter">
+                    <button id="twitter-button">TWITTER</button>
+                  </div>
+                  <div id="twitter">
+                    <button id="email-button">EMAIL</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container" id="alert-popup">
+            <h2 id="order-confirmation" style="margin-bottom: 2%;">Order Confirmation</h2>
+            <p id="order-text">Thank you for placing your order at discountfootballkits.com<br><bR>
+              Please print this page for your reference.
+              <br><br>
+              <button id="popup-button" onclick="newAlert.performCustomAlert()">Also, click here to display the popup</button>
+              <br><br>
+              Your order and payment has been placed successfully. Please find below details of your order, if there are any issues with any of the items on your below order a member of our customer services team will contact you to inform you and allow you to proceed, edit or cancel your order.
+              <br><br>
+              Your order will be displayed in the “Order In Progress” in your account section within 24 hours.
+              <br><br>
+              If you wish to make any amendments, you are required to contact our customer services team on 08456 42 1966. Please note any changes to your order are bound by our terms and conditions. 
+            </p>
+            <div id="order-hidden">My order</div>
+            <div class="confirmation-basket-labels">
+              <ul>
+                <li class="myorder myorder-heading">My Order</li>
+                <li class="myorder-quantity">Quantity</li>
+                <li class="line-total">Line Total</li>
+              </ul>
+            </div>
+            <div class="confirmation-basket-product">
+              <div class="myorder">
+                <div class="product-image">
+                  <img src="img/pants.png" alt="Placholder Image 2" class="product-frame">
+                </div>
+                <div class="confirmation-product-details">
+                  <h1 id="product-title"><strong>Nike Libero Obsidian / White Woven Pant Cuffed</strong></h1>
+                  <p>Size: Large Mens - 33/35</p>
+                  <p>Product Code: 588458451L</p>
+                </div>
+                <div class="product-titles">
+                  <div id="product-quantity">Quantity</div>
+                  <div id="product-price">Price</div>
+                </div>
+              </div>
+              <div class="myorder-quantity">
+                <h1 id="quantity-id"><strong><span class="item-quantity">1</span></strong></h1>
+              </div>
+              <div class="line-total">
+                <h1 id="line-total-p"><strong>22.46</strong></h1>
+              </div>
+            </div>
+            <div class="confirmation-basket-product">
+              <div class="myorder">
+                <div class="product-image">
+                  <img src="img/football.png" alt="Placholder Image 2" class="product-frame">
+                </div>
+                <div class="confirmation-product-details">
+                  <h1 id="product-title"><strong>Nike Team Training Football</strong></h1>
+                  <p>Size: 3</p>
+                  <p>Product Code: SC19111173</p>
+                </div>
+                <div class="product-titles">
+                  <div id="product-quantity">Quantity</div>
+                  <div id="product-price">Price</div>
+                </div>
+              </div>
+              <div class="myorder-quantity">
+                <h1 id="quantity-id"><strong><span class="item-quantity">2</span></strong></h1>
+              </div>
+              <div class="line-total">
+                <h1 id="line-total-p"><strong>11.98</strong></h1>
+              </div>
+            </div>
+            <div class="confirmation-basket-product" style="border-bottom: none;">
+              <div class="myorder">
+                <div class="product-image">
+                  <img src="img/backpack.png" alt="Placholder Image 2" class="product-frame">
+                </div>
+                <div class="confirmation-product-details">
+                  <h1 id="product-title"><strong>Nike Youth Backpack</strong></h1>
+                  <p>Size: 22L</p>
+                  <p>Product Code: BA5773010MISC</p>
+                </div>
+                <div class="product-titles">
+                  <div id="product-quantity">Quantity</div>
+                  <div id="product-price">Price</div>
+                </div>
+              </div>
+              <div class="myorder-quantity">
+                <h1 id="quantity-id"><strong><span class="item-quantity">1</span></strong></h1>
+              </div>
+              <div class="line-total">
+                <h1 id="line-total-p"><strong>16.46</strong></h1>
+              </div>
+            </div>
+            <div class="order-note">
+              <label for="order-note">Order Note</label>
+              <textarea readonly rows="7" cols="125" id="order-note" style="resize: none;"></textarea>
+            </div>
+            <h2 id="order-confirmation" style="margin-bottom: 1%; padding-bottom: 10px; border-bottom: 1px solid #ccc;">Order Summary</h2>
+            <div class="order-summary-final">
+              <div class="left-side">
+              </div>
+              <div class="right-side">
+                <div class="count-items">
+                  <div class="summary-total-items" id="summary-total-items-style"><span class="total-items"></span> items</div>
+                  <span id="order-summary-total">£50.90</span>
+                </div>
+                <br>
+                <div class="delivery-total">
+                  <h id="delivery-header">Delivery</h>
+                  <div class="shipping_price" style="float: right;">£9.99</div>
+                </div>
+                <br>
+                <div id="displayCountry" style="float: left;">UK Mainland Only</div>
+                <br>
+                <div class="final-order-total">
+                  <h id="total-order-header">ORDER TOTAL</h>
+                  <span id="order-final-total">£60.89</span>
+                </div>
+                <br>
+                <div class="exclude-vat">
+                  <h id="vat-header">Excluding VAT:</h>
+                  <div class="totals-value" id="excluding-vat">50.74</div>
+                </div>
+                <br>
+                <div class="exclude-vat" style="margin-bottom: 2%;">
+                  <h id="saving-header">You have saved:</h>
+                  <div class="saving">£24.95</div>
+                </div>
+                <br>
+                <div id="reference-number" style="float: right;"><strong>Reference Number</strong> - DFK091337838</div>
+                <input type="button" name="next" class="print" value="Print">
+                <!-- <h2>Something random on the right side -->
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+    </main>
+
+    <aside>
+      <div class="summary" style="background-color: #fdfdfd;
+    border: 1.5px solid #ccc;">
+        <div class="summary-total-items" style="font-size: 18px; font-weight: 500;">Basket - <span class="total-items"></span> items</div>
+        &nbsp;
+        <hr></hr>
+        <div class="summary-subtotal"   style="  clear: both;
+    padding: 0.5rem 0;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 5%;
+    float: left;
+    margin-bottom: 25px;
+    width: 100%;">
+            <div class="subtotal-title" style="font-weight: 500;">Subtotal</div>
+            <div class="subtotal-value final-value" style="font-weight: 500;" id="basket-subtotal">50.90</div>
+            <div class="summary-promo hide">
+              <div class="promo-title">Promotion</div>
+              <div class="promo-value final-value" id="basket-promo"></div>
+            </div>
+
+            <div class="totals-item" style="width: 100%; margin-top: -4%;">
+            <div class="total-title" style="font-weight: 500;">Excluding VAT</div>
+            <div class="totals-value" style="font-weight: 500;" id="cart-tax">40.72
+            </div>
+            <br>
+            <div class="summary-total" style="width: 100%; margin-top: -5%;">
+              <div class="total-title">Total</div>
+              <div class="total-value final-value" id="basket-total">50.90</div>
+            </div>
+          </div>
+          </div>
+      </div>
+    </aside>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="js/menu.js"></script>
+    <script type="text/javascript" src="js/basket.js"></script>
+    <script type="text/javascript" src="js/popup.js"></script>
+  </body>
+</html>
