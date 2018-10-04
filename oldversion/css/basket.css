@@ -1,0 +1,522 @@
+/*---------------- 04. Basket Section - FIRST FIELDSET -----------------*/
+
+
+/*Top button - choose delivery*/
+
+#msform .top-choose-delivery-button {
+   width: 19%;
+   height: 42px;
+   background: #00a100;
+   font-weight: bold;
+   color: white;
+   border: 0 none;
+   border-radius: 1px;
+   cursor: pointer;
+   padding: 10px 5px;
+   margin: -51px 81%;
+   font-size: 14px;
+   margin-top: 9px;
+   float: left;
+}
+
+#msform .top-choose-delivery-button:hover,
+#msform .top-choose-delivery-button:focus {
+   box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+}
+
+
+/*General style from fieldset*/
+
+img,
+.basket-module,
+.basket-labels,
+.basket-product {
+   width: 100%;
+}
+
+button,
+.basket,
+.basket-module,
+.basket-labels,
+.item,
+.price,
+.quantity,
+.subtotal,
+.basket-product,
+.product-image,
+.product-details {
+   float: left;
+}
+
+
+/*Basket span items*/
+
+.summary-total-items {
+   color: #000;
+   font-size: 1.5em;
+   text-align: left;
+   font-weight: 800;
+   margin-top: 10px;
+}
+
+#summary-total-items-style {
+   font-size: 13px;
+   font-weight: 560;
+   float: left;
+   margin-top: 0px;
+}
+
+.basket-labels {
+   border-top: 1px solid #ccc;
+   border-bottom: 1px solid #ccc;
+   margin-top: 15px;
+}
+
+
+/*First li from ul*/
+
+.item {
+   width: 55%;
+}
+
+.item-heading {
+   padding-left: 0;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+.price:before,
+.subtotal:before,
+.subtotal-value:before,
+.total-value:before,
+.promo-value:before,
+.promo-title,
+.totals-value:before {
+   content: '£';
+}
+
+.price,
+.quantity,
+.subtotal {
+   width: 15%;
+}
+
+.subtotal {
+   text-align: right;
+}
+
+
+/*Basket products*/
+
+.basket-product {
+   border-bottom: 1px solid #ccc;
+   padding: 40px 0px 85px;
+   position: relative;
+}
+
+.product-image {
+   width: 35%;
+}
+
+.product-details {
+   width: 65%;
+}
+
+.product-details {
+   padding: 0 1.5rem;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+.quantity-field {
+   background-color: #ccc;
+   border: 1px solid #aaa;
+   border-radius: 4px;
+   font-size: 0.625rem;
+   padding: 2px;
+   width: 3.75rem;
+}
+
+.remove {
+   bottom: 36px;
+   float: left;
+   position: absolute;
+   left: 6%;
+   text-align: left;
+   width: 45%;
+}
+
+.remove button {
+   background-color: transparent;
+   color: gray;
+   border-radius: 3px;
+   float: left;
+   width: 67px;
+   height: 21px;
+}
+
+.remove button:hover {
+   background-color: transparent;
+   color: red;
+   border-radius: 3px;
+   float: left;
+   width: 67px;
+   height: 21px;
+}
+
+.basket-empty {
+   display: block;
+   padding-top: 20px;
+}
+
+.empty-btn {
+   background-color: transparent;
+   color: black;
+   border-radius: 3px;
+   float: none;
+   width: 150px;
+   margin: 32px 0px 0px 0px;
+   height: 25px;
+   font-size: 17px;
+   font-weight: 700;
+}
+
+.empty-btn:hover,
+.empty-btn:focus {
+   background-color: transparent;
+   color: red;
+}
+
+.hide {
+   display: none;
+}
+
+.basket,
+aside {
+   padding: 0 1rem;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+.basket {
+   width: 50%;
+}
+
+.basket-module {
+   color: #111;
+}
+
+#label-for-promocode {
+   float: left;
+   font-size: 15px;
+   padding-right: 10px;
+   padding-top: 5px;
+}
+
+.promo-code-heading {
+   padding-left: 0;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+   width: 50%;
+}
+
+.promo-code-field {
+   border: 1px solid #ccc;
+   padding: 0.5rem;
+   text-transform: uppercase;
+   transition: all 0.2s linear;
+   width: 20%;
+   float: left;
+   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+   -o-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+   box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+}
+
+#value-button {
+   display: inline-block;
+   text-align: center;
+   vertical-align: middle;
+   user-select: none;
+   padding: 0px 0;
+   margin-left: 0px;
+}
+
+#value-button:hover {
+   cursor: pointer;
+}
+
+.dec {
+   margin-right: 3px;
+   margin-bottom: 7px;
+   border: none;
+   background-color: transparent;
+   color: #a2a2a2;
+   font-size: 17px;
+   font-weight: 600;
+}
+
+.inc {
+   margin-left: 1px;
+   margin-bottom: 4px;
+   border: none;
+   background-color: transparent;
+   color: #a2a2a2;
+   font-size: 17px;
+   font-weight: 600;
+}
+
+.dec:hover,
+.inc:hover {
+   color: #00a100;
+}
+
+#input-wrap {
+   margin: 0px;
+   padding: 0px;
+}
+
+input#number {
+   text-align: center;
+   border: none;
+   border: 1px solid #ccc;
+   margin: 0px;
+   width: 25px;
+   height: 27px;
+   font-size: 12px;
+   margin-left: -1px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+   -webkit-appearance: none;
+   margin: 0;
+}
+
+#update-btn {
+   margin-top: 3px;
+   color: #a2a2a2;
+   font-weight: 550;
+   font-size: 12px;
+   margin-left: 3px;
+}
+
+#update-btn:hover {
+   color: #00a100;
+}
+
+.mobile-price,
+.mobile-quantity,
+.mobile-subtotal {
+   visibility: hidden;
+   display: none;
+}
+
+.promo-code-field:hover,
+.promo-code-field:focus {
+   border: 1px solid #999;
+}
+
+.promo-code-cta {
+   border-radius: 4px;
+   font-size: 0.625rem;
+   margin-left: 0.625rem;
+   padding: 0.6875rem 1.25rem 0.625rem;
+}
+
+.promo-code-cta:hover {
+   background-color: #00a100;
+   color: white;
+}
+
+.quote-div {
+   float: right;
+   margin-bottom: 42px;
+   margin-top: 0px;
+   margin-right: 0px;
+}
+
+#quote-ref-heading {
+   float: left;
+   font-size: 15px;
+   padding-right: 10px;
+   padding-top: 5px;
+}
+
+#quote-ref {
+   border: 1px solid #ccc;
+   padding: 0.5rem;
+   text-transform: uppercase;
+   transition: all 0.2s linear;
+   width: 44%;
+   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+   -o-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+   box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+}
+
+.summary-subtotal {
+   clear: both;
+   padding: 0.5rem 0;
+   margin-top: -35px;
+   float: right;
+   margin-bottom: 25px;
+   width: 39%;
+}
+
+.summary-total {
+   clear: both;
+   padding: 0.5rem 0;
+   margin-top: -35px;
+   float: right;
+   width: 100%;
+}
+
+.totals-item {
+   clear: both;
+   padding: 0.5rem 0;
+   margin-top: -35px;
+   float: right;
+   width: 39%;
+}
+
+.vat-total {
+   clear: both;
+   padding: 0.5rem 0;
+   margin-top: -10px;
+}
+
+.subtotal-title {
+   font-size: 15px;
+   font-weight: 800;
+   color: #111;
+   float: left;
+   width: 50%;
+}
+
+.total-title {
+   font-weight: 800;
+   font-size: 15px;
+   color: #111;
+   float: left;
+   width: 50%;
+}
+
+.totals-value {
+   font-size: 12px;
+   color: #111;
+   float: left;
+   width: 50%;
+}
+
+.subtotal-value,
+.total-value,
+.promo-value,
+.vat-title {
+   color: #111;
+   float: left;
+   width: 50%;
+}
+
+.promo-title {
+   color: red;
+}
+
+.subtotal-value,
+.total-value {
+   text-align: right;
+   font-size: 15px;
+   font-weight: 800;
+}
+
+.totals-value {
+   text-align: right;
+   font-size: 15px;
+   font-weight: 800;
+}
+
+.summary-promo {
+   -webkit-transition: all .3s ease;
+   -moz-transition: all .3s ease;
+   -o-transition: all .3s ease;
+   transition: all .3s ease;
+}
+
+.promo-title {
+   float: left;
+   width: 70%;
+}
+
+.promo-value {
+   color: red;
+   float: left;
+   text-align: right;
+   width: 30%;
+}
+
+.summary {
+   background-color: #eee;
+   border: 1px solid #aaa;
+   padding: 1rem;
+   position: fixed;
+   width: 250px;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+
+/*------ BOTTOM BUTTON - Choose Delivery ---------*/
+
+#msform .choose-delivery-button {
+   width: 19%;
+   height: 42px;
+   background: #00a100;
+   font-weight: bold;
+   color: white;
+   border: 0 none;
+   border-radius: 1px;
+   cursor: pointer;
+   float: right;
+   padding: 10px 5px;
+   margin: 35px -39%;
+   font-size: 14px;
+}
+
+#msform .choose-delivery-button:hover,
+#msform .choose-delivery-button:focus {
+   box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+}
+
+
+/*--------CONTINUE SHOPPING BUTTON BOTTOM -----------*/
+
+.shopping-button {
+   float: left;
+   background-color: #656565;
+   color: #fff;
+   padding: 10px 15px;
+   border-radius: 0px;
+   font-weight: bold;
+   border: 3px solid #656565;
+   -webkit-transition: 0.3s ease;
+   transition: 0.3s ease;
+   cursor: pointer;
+   text-align: center;
+   border-radius: 1px;
+   margin-bottom: 42px;
+   margin-top: 35px;
+   margin-right: 8px;
+}
+
+.shopping-button:hover,
+.shopping-button:focus {
+   box-shadow: 0 0 0 2px white, 0 0 0 3px #656565;
+}
+
+
+/*------------------------ END OF 04. Basket ------------------------*/

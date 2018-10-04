@@ -1,719 +1,990 @@
-/*---------------- 09. FOR MOBILES -----------------*/
+/*---------------- MOBILE VERSION OF THE CHECKOUT PROCESS -----------------
 
-aside {
-   float: right;
-   position: relative;
-   width: 30%;
-}
+  [Table of contents]
+
+  1. MEDIA FOR MAX-DEVICE-WIDTH: 480px
+   1.1 MOBILE FOR PROGRESS BAR
+   1.2 MOBILE FOR BASKET
+   1.3 MOBILE FOR SIGN UP/IN
+   1.4 MOBILE FOR DELIVERY
+   1.5 MOBILE FOR PAYMENT
+  2. MEDIA FOR MAX-DEVICE WIDTH: 640px
+   2.1 MOBILE FOR POP-UP CONFIRMATION
+  3. MEDIA FOR MIN-WIDTH: 641px and MAX-WIDTH: 960px
+  4. MEDIA FOR MAX-WIDTH: 960px
+  5. MEDIA FOR MAX-WIDTH: 1200px
+  6. MEDIA FOR MAX-WIDTH: 1400px
+  7. MEDIA FOR MAX-WIDTH: 1600px
+  8. MEDIA FOR MAX-WIDTH: 1900px
+
+  ------------------------------------------------------------------------*/
+
+
+/*--------------- 1. MEDIA FOR MAX-DEVICE-WIDTH: 480px ----------------------*/
 
 @media only screen and (max-device-width: 480px) {
-   /*------------- MOBILE FOR PROGRESS BAR------------*/
-   #progressbar {
-      margin-bottom: 30px;
-      overflow: hidden;
-      counter-reset: step;
-      text-align: center;
-      width: 120%;
-      margin-left: -10%;
-   }
-   #progressbar li {
-      list-style-type: none;
-      color: #bbb7b7;
-      font-weight: 600;
-      white-space: nowrap;
-      font-size: 25px;
-      width: 19.33%;
-      float: left;
-      position: relative;
-   }
-   #progressbar li:before {
-      content: counter(step);
-      counter-increment: step;
-      z-index: 1;
-      width: 60px;
-      line-height: 60px;
-      left: 50%;
-      top: 50%;
-      display: block;
-      font-size: 30px;
-      font-weight: 550;
-      background-color: #fff;
-      color: #ccc;
-      border: 2px solid #ccc;
-      border-radius: 50%;
-      margin: 0 auto 5px auto;
-   }
-   /*--------------- MOBILE FOR BASKET --------------*/
-   .summary,
-   .item {
-      width: 98%;
-   }
-   .img {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      width: 85%;
-   }
-   .basket-labels {
-      display: none;
-   }
-   .basket-product {
-      width: 100%;
-      border: none;
-      border-bottom: 4px double #00a100;
-   }
-   .product-image {
-      border: 1px solid #ccc;
-      width: 100%;
-      margin-bottom: 5%;
-   }
-   .summary-total-items {
-      font-size: 30px;
-   }
-   #msform .top-choose-delivery-button {
-      width: 36%;
-      height: 70px;
-      background: #00a100;
-      font-weight: 600;
-      color: white;
-      border: 0 none;
-      border-radius: 1px;
-      cursor: pointer;
-      padding: 10px 5px;
-      margin: -10% 62%;
-      font-size: 29px;
-      margin-top: 12px;
-      float: left;
-   }
-   .product-details {
-      width: 100%;
-      font-size: 32px;
-      margin-bottom: 5%;
-   }
-   #media-title {
-      font-size: 33px;
-   }
-   .mobile-price {
-      visibility: visible;
-      display: inline-block;
-      font-size: 32px;
-      width: 41%;
-      border-bottom: 0.5px solid #ccc;
-      font-weight: 700;
-      margin-bottom: 1%;
-   }
-   .mobile-quantity {
-      visibility: visible;
-      display: inline-block;
-      font-size: 32px;
-      width: 33%;
-      /* text-align: right; */
-      border-bottom: 0.5px solid #ccc;
-      font-weight: 700;
-      margin-bottom: 1%;
-   }
-   .mobile-subtotal {
-      visibility: visible;
-      display: inline-block;
-      font-size: 32px;
-      width: 23%;
-      text-align: right;
-      border-bottom: 0.5px solid #ccc;
-      font-weight: 700;
-      margin-bottom: 1%;
-   }
-   .price,
-   .subtotal {
-      width: 32%;
-      font-size: 32px;
-   }
-   .quantity {
-      text-align: center;
-      width: 34%;
-   }
-   input#number {
-      text-align: center;
-      border: none;
-      border: 1px solid #ccc;
-      margin: 0px;
-      width: 55px;
-      height: 55px;
-      font-size: 32px;
-      margin-left: -1px;
-   }
-   .inc,
-   .dec {
-      font-size: 32px;
-      margin-top: -10px;
-   }
-   #update-btn {
-      font-size: 27px;
-   }
-   .remove {
-      left: 0;
-      margin-bottom: 3%;
-   }
-   .remove button {
-      font-size: 32px;
-      display: inline-flex;
-   }
-   .empty-btn {
-      margin-left: -20px;
-      width: 300px;
-      height: 25px;
-      font-size: 32px;
-      font-weight: 700;
-   }
-   #label-for-promocode {
-      font-size: 32px;
-      width: 90%;
-   }
-   .promo-code-field {
-      width: 85%;
-      height: 45px;
-      font-size: 29px;
-   }
-   .promo-code-cta {
-      height: 62px;
-      width: 11%;
-      font-size: 26px;
-      margin-bottom: 1%;
-   }
-   .quote-div {
-      width: 100%;
-      float: left;
-   }
-   #quote-ref-heading {
-      width: 100%;
-      font-size: 32px;
-   }
-   #quote-ref {
-      width: 97%;
-      height: 45px;
-      margin-bottom: 3%;
-      font-size: 29px;
-   }
-   .summary-subtotal,
-   .totals-item {
-      width: 98%;
-      margin-right: 2%;
-   }
-   .summary-total {
-      margin-top: -10px;
-   }
-   .subtotal-title,
-   .subtotal-value,
-   .total-value,
-   .total-title,
-   .totals-value {
-      font-size: 32px;
-   }
-   .shopping-button {
-      background-color: #656565;
-      color: #fff;
-      width: 98%;
-      height: 80px;
-      cursor: pointer;
-      font-size: 32px;
-      text-align: center;
-      border-radius: 1px;
-      margin-bottom: 10%;
-      margin-top: -8%;
-   }
-   #msform .choose-delivery-button {
-      width: 98%;
-      height: 80px;
-      background: #00a100;
-      font-weight: bold;
-      color: white;
-      border: 0 none;
-      border-radius: 1px;
-      cursor: pointer;
-      float: right;
-      padding: 10px 5px;
-      margin: 95px -98%;
-      font-size: 32px;
-      font-weight: 600;
-   }
-   /*--------------- MOBILE FOR BASKET --------------*/
-   /*--------------- MOBILE FOR SIGN UP/IN --------------*/
-   .signup {
-      width: 100%;
-      border-right: none;
-      margin-bottom: 12%;
-   }
-   .signin {
-      width: 100%;
-   }
-   #signup-title,
-   #signin-title {
-      font-size: 32px;
-      border-bottom: 1px solid #ccc;
-   }
-   #signup-description,
-   #signin-description {
-      font-size: 27px;
-   }
-   .register-button {
-      width: 98%;
-      height: 80px;
-      cursor: pointer;
-      text-align: center;
-      font-size: 29px;
-   }
-   #msform .continue-as-guest {
-      width: 98%;
-      height: 80px;
-      background: #00a100;
-      font-weight: bold;
-      font-size: 29px;
-      margin-top: -91%;
-   }
-   #text-label,
-   #pass-label {
-      font-size: 29px;
-   }
-   input#login,
-   input#password {
-      width: 95%;
-      height: 49px;
-      font-size: 29px;
-   }
-   .signin-button {
-      width: 98%;
-      height: 80px;
-      background: #00a100;
-      font-weight: bold;
-      font-size: 29px;
-      margin-right: 2%;
-      margin-top: 5%;
-   }
-   .container-checkbox {
-      font-size: 29px;
-      padding-left: 45px;
-      margin-top: 3%;
-   }
-   #forgot {
-      font-size: 29px;
-      display: block;
-      margin-top: -45px;
-      margin-right: 3%;
-      float: right;
-   }
-   .checkmark {
-      height: 35px;
-      width: 35px;
-   }
-   .container-checkbox .checkmark:after {
-      left: 9px;
-      top: 2px;
-      width: 15px;
-      height: 20px;
-      border: solid white;
-   }
-   /*--------------- MOBILE FOR SIGN UP/IN --------------*/
-   /*---------------- MOBILE FOR DELIVERY --------------*/
-   .delivery-labels {
-      width: 98%;
-   }
-   .order-summary {
-      visibility: visible;
-      display: inline-grid;
-      width: 98%;
-   }
-   .choose-country {
-      width: 30.3%;
-      font-size: 32px;
-      margin-left: 18px;
-   }
-   .selectlist {
-      width: 26.3%;
-      height: 30px;
-   }
-   .delivery-price {
-      width: 27.3%;
-      text-align: center;
-      font-size: 32px;
-      margin-left: 7.5%;
-   }
-   .flex-3-cols {
-      width: 98%;
-      display: inherit;
-      float: left;
-      flex-wrap: wrap;
-      border-right: none;
-      margin-bottom: 2%;
-   }
-   #delivery-option1-label {
-      margin-top: 3%;
-      display: inline-table;
-   }
-   #delivery-option3-label,
-   #delivery-option4-label {
-      margin-top: 3%;
-      display: inline-table;
-      padding: 0px 0 12px 35px;
-   }
-   #delivery-option2-label {
-      margin-top: 3%;
-      display: inline-table;
-      padding: 0px 0 12px 35px;
-   }
-   #delivery-option5-label {
-      margin-bottom: 0%;
-      border-bottom: 2px solid #ccc;
-      display: inline-table;
-   }
-   .dpd-video {
-      font-size: 24px;
-      width: 98%;
-   }
-   #dpd-youtube {
-      width: 99%;
-      height: 500px;
-   }
-   #back-to-cart-id {
-      width: 98%;
-      height: 80px;
-      font-size: 32px;
-      float: left;
-      margin-left: 0%;
-      margin-top: -19%;
-   }
-   #msform .proceed-to-payment {
-      width: 98%;
-      height: 80px;
-      font-size: 32px;
-      margin-top: 9%;
-      margin-right: 2%;
-   }
-   #option1-heading,
-   #option2-heading,
-   #option3-heading,
-   #option5-heading {
-      font-size: 24px;
-   }
-   #option4-heading {
-      font-size: 24px;
-      margin-top: 21%;
-   }
-   .text-delivery-option4 {
-      margin-top: 9%;
-   }
-   #line1-option1,
-   #line1-option2,
-   #line1-option3,
-   #line1-option4,
-   #line2-option5,
-   #line2-option1,
-   #line1-option5,
-   #line2-option2 {
-      font-size: 23px;
-      font-weight: 500;
-   }
-   .price-option1,
-   .price-option2,
-   .price-option3,
-   .price-option5 {
-      font-size: 24px;
-   }
-   .price-option4 {
-      font-size: 24px;
-      margin-top: 5%;
-   }
-   #option2-img {
-      width: 95%;
-      margin-top: 7%;
-      margin-left: 10%;
-   }
-   #option3-img {
-      width: 95%;
-      margin-top: 9%;
-      margin-left: 10%;
-   }
-   .top-bar {
-      border: 1px solid grey;
-      margin-left: -3%;
-      width: 100%;
-      background: grey;
-      font-size: 26px;
-      margin-top: -20px;
-   }
-   #select-country {
-      font-size: 28px;
-   }
-   .mobile-order-title {
-      visibility: visible;
-      display: inline-grid;
-      font-size: 30px;
-      font-weight: 700;
-      margin-top: 10px;
-   }
-   .count-items {
-      font-size: 28px;
-   }
-   #summary-total-items-style {
-      font-size: 28px;
-   }
-   .delivery-total {
-      font-size: 28px;
-   }
-   #displayCountry {
-      font-size: 28px;
-      text-align: left;
-   }
-   .final-order-total {
-      font-size: 28px;
-   }
-   #summary-title-delivery {
-      visibility: hidden;
-      display: none;
-   }
-   .exclude-vat,
-   #excluding-vat,
-   .saving,
-   .totals-value {
-      font-size: 28px;
-   }
-   #saving-header {
-      margin-bottom: 5%;
-   }
-   /*--------------- MOBILE FOR DELIVERY --------------*/
-   /*---------------- MOBILE FOR PAYMENT --------------*/
-   #delivery-address-header {
-      font-size: 32px;
-   }
-   .first-name {
-      float: left;
-      font-size: 28px;
-      width: 45%;
-   }
-   .last-name {
-      font-size: 28px;
-      float: right;
-      margin-right: -57px;
-      width: 48%;
-   }
-   .company-name,
-   .line-1,
-   .line-2,
-   .county,
-   .post-code,
-   .country,
-   .email,
-   .tel-mobile {
-      font-size: 28px;
-   }
-   input#firstname,
-   input#lastname {
-      width: 100%;
-      float: unset;
-      height: 49px;
-   }
-   input#companyname,
-   input#line1,
-   input#line2,
-   input#county,
-   input#postcode,
-   input#country,
-   input#email,
-   input#telmobile {
-      width: 93%;
-      height: 49px;
-   }
-   #order-totals-header {
-      font-size: 32px;
-      border-top: 1px solid #ccc;
-   }
-   .totals-order {
-      width: 98%;
-   }
-   #payment-method {
-      font-size: 32px;
-   }
-   .payment-radio-buttons {
-      font-size: 32px;
-   }
-   #order-note {
-      width: 100%;
-      height: 300px;
-      margin-top: 18px;
-   }
-   .order-note {
-      font-size: 28px;
-   }
-   .proceed-order {
-      margin-top: 0%;
-      width: 100%;
-      margin-right: -41%;
-      height: 80px;
-      font-size: 32px;
-      float: left;
-   }
-   /*--------------- MOBILE FOR PAYMENT --------------*/
-   /*---------------- MOBILE FOR CONFIRMATION --------------*/
-   #order-confirmation {
-      font-size: 32px;
-   }
-   #order-text {
-      font-size: 26px;
-   }
-   #popup-button {
-      font-size: 26px;
-   }
-   .confirmation-basket-labels {
-      visibility: hidden;
-      display: none;
-   }
-   #order-hidden {
-      visibility: visible;
-      display: inline-block;
-      font-size: 32px;
-      margin-top: 26px;
-      width: 98%;
-      border-bottom: 1px solid #ccc;
-   }
-   .myorder {
-      width: 98%;
-   }
-   .confirmation-product-details {
-      font-size: 32px;
-      width: 100%;
-      margin-bottom: 3%;
-   }
-   .confirmation-basket-product {
-      border-bottom: 1px double #00a100;
-   }
-   #product-title {
-      font-size: 33px;
-   }
-   #product-quantity {
-      visibility: visible;
-      display: inline-block;
-      margin-left: 10%;
-      float: left;
-      font-size: 28px;
-      font-weight: 700;
-   }
-   #product-price {
-      visibility: visible;
-      display: inline-block;
-      float: right;
-      margin-right: 15%;
-      font-size: 28px;
-      font-weight: 700;
-   }
-   .product-titles {
-      visibility: visible;
-      display: inline-block;
-      width: 98%;
-      border-bottom: 1px solid #ccc;
-   }
-   .myorder-quantity {
-      font-size: 28px;
-      margin-left: 10%;
-   }
-   #quantity-id {
-      font-size: 28px;
-      margin-left: 31%;
-      margin-top: 10px;
-   }
-   #line-total-p {
-      font-size: 28px;
-      margin-left: -72%;
-      margin-top: 10px;
-   }
-   .right-side {
-      width: 98%;
-      display: inline-grid;
-      margin-right: 1%;
-   }
-   .print {
-      width: 98%;
-      float: none;
-      height: 80px;
-      font-size: 32px;
-      margin-top: 7%;
-   }
-   #vat-header {
-      font-size: 28px;
-   }
-   #reference-number {
-      font-size: 32px;
-      text-align: left;
-      margin-top: -3%;
-   }
+  /*------------- 1.1 MOBILE FOR PROGRESS BAR------------*/
+  .progressbar {
+    margin-bottom: 30px;
+    overflow: hidden;
+    counter-reset: step;
+    text-align: center;
+    width: 120%;
+    margin-left: -11%;
+  }
+  .progressbar li {
+    list-style-type: none;
+    color: #bbb7b7;
+    font-weight: 600;
+    white-space: nowrap;
+    font-size: 25px;
+    width: 19.33%;
+    float: left;
+    position: relative;
+  }
+  span.round-tab {
+    width: 64px;
+    height: 64px;
+    line-height: 64px;
+    display: inline-block;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 2px solid #e0e0e0;
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 550;
+    margin: 0 auto 5px auto;
+  }
+  #label {
+    margin-top: 18%;
+    margin-left: 28px;
+    font-size: 26px;
+  }
+  #progressbar li:before {
+    content: counter(step);
+    counter-increment: step;
+    z-index: 1;
+    width: 60px;
+    line-height: 60px;
+    left: 50%;
+    top: 50%;
+    display: block;
+    font-size: 30px;
+    font-weight: 550;
+    background-color: #fff;
+    color: #ccc;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    margin: 0 auto 5px auto;
+  }
+  /*--------------- 1.2 MOBILE FOR BASKET --------------*/
+  .summary,
+  .item {
+    width: 98%;
+  }
+  .img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+  }
+  img {
+    width: 55%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .basket-labels {
+    display: none;
+  }
+  .basket-product {
+    width: 100%;
+    border: none;
+    border-bottom: 4px double #00a100;
+  }
+  .product-image {
+    border: 1px solid #ccc;
+    width: 100%;
+    margin-bottom: 5%;
+  }
+  .summary-total-items {
+    font-size: 30px;
+  }
+  #msform .top-choose-delivery-button {
+    width: 36%;
+    height: 70px;
+    background: #00a100;
+    font-weight: 600;
+    color: white;
+    border: 0 none;
+    border-radius: 1px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: -10% 62%;
+    font-size: 29px;
+    margin-top: 12px;
+    float: left;
+  }
+  .product-details {
+    width: 100%;
+    font-size: 32px;
+    margin-bottom: 5%;
+  }
+  #media-title {
+    font-size: 33px;
+  }
+  .mobile-price {
+    visibility: visible;
+    display: inline-block;
+    font-size: 32px;
+    width: 41%;
+    border-bottom: 0.5px solid #ccc;
+    font-weight: 700;
+    margin-bottom: 1%;
+  }
+  .mobile-quantity {
+    visibility: visible;
+    display: inline-block;
+    font-size: 32px;
+    width: 33%;
+    border-bottom: 0.5px solid #ccc;
+    font-weight: 700;
+    margin-bottom: 1%;
+  }
+  .mobile-subtotal {
+    visibility: visible;
+    display: inline-block;
+    font-size: 32px;
+    width: 23%;
+    text-align: right;
+    border-bottom: 0.5px solid #ccc;
+    font-weight: 700;
+    margin-bottom: 1%;
+  }
+  .price,
+  .subtotal {
+    width: 32%;
+    font-size: 32px;
+  }
+  .quantity {
+    text-align: center;
+    width: 34%;
+  }
+  input#number {
+    text-align: center;
+    border: none;
+    border: 1px solid #ccc;
+    margin: 0px;
+    width: 55px;
+    height: 55px;
+    font-size: 32px;
+    margin-left: -1px;
+  }
+  .inc,
+  .dec {
+    font-size: 32px;
+    margin-top: -10px;
+  }
+  #update-btn {
+    font-size: 27px;
+  }
+  .remove {
+    left: 0;
+    margin-bottom: 3%;
+  }
+  .remove button {
+    font-size: 32px;
+    display: inline-flex;
+  }
+  .empty-btn {
+    margin-left: -20px;
+    width: 300px;
+    height: 25px;
+    font-size: 32px;
+    font-weight: 700;
+  }
+  #label-for-promocode {
+    font-size: 32px;
+    width: 90%;
+  }
+  .promo-code-field {
+    width: 85%;
+    height: 45px;
+    font-size: 29px;
+  }
+  .promo-code-cta {
+    height: 62px;
+    width: 11%;
+    font-size: 26px;
+    margin-bottom: 1%;
+  }
+  .quote-div {
+    width: 100%;
+    float: left;
+  }
+  #quote-ref-heading {
+    width: 100%;
+    font-size: 32px;
+  }
+  #quote-ref {
+    width: 97%;
+    height: 45px;
+    margin-bottom: 3%;
+    font-size: 29px;
+  }
+  .summary-subtotal,
+  .totals-item {
+    width: 98%;
+    margin-right: 2%;
+  }
+  .summary-total {
+    margin-top: -10px;
+  }
+  .subtotal-title,
+  .subtotal-value,
+  .total-value,
+  .total-title,
+  .totals-value {
+    font-size: 32px;
+  }
+  .shopping-button {
+    background-color: #656565;
+    color: #fff;
+    width: 98%;
+    height: 80px;
+    cursor: pointer;
+    font-size: 32px;
+    text-align: center;
+    border-radius: 1px;
+    margin-bottom: 10%;
+    margin-top: -8%;
+  }
+  #msform .choose-delivery-button {
+    width: 98%;
+    height: 80px;
+    background: #00a100;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 1px;
+    cursor: pointer;
+    float: right;
+    padding: 10px 5px;
+    margin: 95px -98%;
+    font-size: 32px;
+    font-weight: 600;
+  }
+  /*--------------- 1.3 MOBILE FOR SIGN UP/IN --------------*/
+  .signup {
+    width: 100%;
+    border-right: none;
+    margin-bottom: -3%;
+  }
+  .signin {
+    width: 100%;
+  }
+  #signup-title,
+  #signin-title {
+    font-size: 32px;
+    border-bottom: 1px solid #ccc;
+  }
+  #signup-description,
+  #signin-description {
+    font-size: 27px;
+  }
+  .register-button {
+    width: 48%;
+    float: left;
+    height: 80px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 32px;
+  }
+  #msform .continue-as-guest {
+    width: 48%;
+    float: right;
+    margin-right: -48%;
+    height: 80px;
+    background: #00a100;
+    font-weight: bold;
+    font-size: 32px;
+    margin: ;
+    margin-top: -73.3%;
+  }
+  #text-label,
+  #pass-label {
+    font-size: 29px;
+  }
+  input#login,
+  input#password {
+    width: 95%;
+    height: 49px;
+    font-size: 29px;
+  }
+  .signin-button {
+    width: 48%;
+    height: 80px;
+    float: right;
+    background: #00a100;
+    font-weight: bold;
+    font-size: 32px;
+    margin-right: 2%;
+    margin-top: 5%;
+  }
+  .container-checkbox {
+    font-size: 29px;
+    padding-left: 45px;
+    margin-top: 3%;
+  }
+  #forgot {
+    font-size: 29px;
+    display: block;
+    margin-top: -45px;
+    margin-right: 3%;
+    float: right;
+  }
+  .checkmark {
+    height: 35px;
+    width: 35px;
+  }
+  .container-checkbox .checkmark:after {
+    left: 9px;
+    top: 2px;
+    width: 15px;
+    height: 20px;
+    border: solid white;
+  }
+  /*---------------- 1.4 MOBILE FOR DELIVERY --------------*/
+  .delivery-labels {
+    width: 98%;
+  }
+  .order-summary {
+    visibility: visible;
+    display: inline-grid;
+    width: 98%;
+  }
+  .choose-country {
+    width: 30.3%;
+    font-size: 32px;
+    margin-left: 18px;
+  }
+  .selectlist {
+    width: 26.3%;
+    height: 30px;
+  }
+  .delivery-price {
+    width: 27.3%;
+    text-align: center;
+    font-size: 32px;
+    margin-left: 7.5%;
+  }
+  .flex-3-cols {
+    width: 98%;
+    display: inherit;
+    float: left;
+    flex-wrap: wrap;
+    border-right: none;
+    margin-bottom: 2%;
+  }
+  #delivery-option1-label {
+    margin-top: 3%;
+    display: inline-table;
+  }
+  #delivery-option3-label,
+  #delivery-option4-label {
+    margin-top: 3%;
+    display: inline-table;
+    padding: 0px 0 12px 35px;
+  }
+  #delivery-option2-label {
+    margin-top: 3%;
+    display: inline-table;
+    padding: 0px 0 12px 35px;
+  }
+  #delivery-option5-label {
+    margin-bottom: 0%;
+    border-bottom: 2px solid #ccc;
+    display: inline-table;
+  }
+  .dpd-video {
+    font-size: 24px;
+    width: 98%;
+  }
+  #dpd-youtube {
+    width: 99%;
+    height: 500px;
+  }
+  #back-to-cart-id {
+    width: 48%;
+    height: 80px;
+    float: left;
+    font-size: 32px;
+    margin-left: 0%;
+    margin-top: -1%;
+  }
+  #msform .proceed-to-payment {
+    width: 48%;
+    height: 80px;
+    font-size: 32px;
+    margin-top: -1%;
+    margin-right: 2%;
+  }
+  #option1-heading,
+  #option2-heading,
+  #option3-heading,
+  #option5-heading {
+    font-size: 24px;
+  }
+  #option4-heading {
+    font-size: 24px;
+    margin-top: 21%;
+  }
+  #delivery-option1,
+  #delivery-option2,
+  #delivery-option3,
+  #delivery-option4,
+  #delivery-option5 {
+    transform: scale(3);
+  }
+  .text-delivery-option4 {
+    margin-top: 9%;
+  }
+  #line1-option1,
+  #line1-option2,
+  #line1-option3,
+  #line1-option4,
+  #line2-option5,
+  #line2-option1,
+  #line1-option5,
+  #line2-option2 {
+    font-size: 23px;
+    font-weight: 500;
+  }
+  .price-option1,
+  .price-option2,
+  .price-option3,
+  .price-option5 {
+    font-size: 24px;
+  }
+  .price-option4 {
+    font-size: 24px;
+    margin-top: 5%;
+  }
+  #option2-img {
+    width: 95%;
+    margin-top: 12%;
+    margin-left: 22%;
+  }
+  #option3-img {
+    width: 95%;
+    margin-top: 15%;
+    margin-left: 21%;
+  }
+  #option5-img {
+    margin-left: 30%;
+  }
+  .top-bar {
+    border: 1px solid grey;
+    margin-left: -3%;
+    width: 100%;
+    background: grey;
+    font-size: 26px;
+    margin-top: -20px;
+  }
+  #select-country {
+    font-size: 28px;
+  }
+  .mobile-order-title {
+    visibility: visible;
+    display: inline-grid;
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 10px;
+  }
+  .count-items {
+    font-size: 28px;
+  }
+  #summary-total-items-style {
+    font-size: 28px;
+  }
+  .delivery-total {
+    font-size: 28px;
+  }
+  #displayCountry {
+    font-size: 28px;
+    text-align: left;
+  }
+  .final-order-total {
+    font-size: 28px;
+  }
+  #summary-title-delivery {
+    visibility: hidden;
+    display: none;
+  }
+  .exclude-vat,
+  #excluding-vat,
+  .saving,
+  .totals-value {
+    font-size: 28px;
+  }
+  #saving-header {
+    margin-bottom: 5%;
+  }
+  #back-button {
+    width: 48%;
+    height: 80px;
+    font-weight: bold;
+    font-size: 32px;
+    margin-right: 2%;
+    margin-top: 5%;
+  }
+  /*---------------- 1.5 MOBILE FOR PAYMENT --------------*/
+  #delivery-address-header {
+    font-size: 32px;
+  }
+  .first-name {
+    float: left;
+    font-size: 28px;
+    width: 45%;
+  }
+  .last-name {
+    font-size: 28px;
+    float: right;
+    margin-right: -57px;
+    width: 48%;
+  }
+  .company-name,
+  .line-1,
+  .line-2,
+  .county,
+  .post-code,
+  .country,
+  .email,
+  .tel-mobile {
+    font-size: 28px;
+  }
+  input#firstname,
+  input#lastname {
+    width: 100%;
+    float: unset;
+    height: 49px;
+  }
+  input#companyname,
+  input#line1,
+  input#line2,
+  input#county,
+  input#postcode,
+  input#country,
+  input#email,
+  input#telmobile {
+    width: 93%;
+    height: 49px;
+  }
+  #order-totals-header {
+    font-size: 32px;
+    border-top: 1px solid #ccc;
+  }
+  .totals-order {
+    width: 98%;
+  }
+  #payment-method {
+    font-size: 32px;
+  }
+  .payment-radio-buttons {
+    font-size: 32px;
+  }
+  #order-note {
+    width: 104%;
+    height: 300px;
+    margin-top: 18px;
+    margin-left: -1%;
+  }
+  .order-note {
+    font-size: 28px;
+  }
+  .proceed-order {
+    margin-top: 0%;
+    width: 50%;
+    margin-right: -2%;
+    height: 80px;
+    font-size: 32px;
+    float: right;
+  }
+  #back-button-payment {
+    width: 50%;
+    height: 80px;
+    font-weight: bold;
+    font-size: 32px;
+    margin-top: 0%;
+    margin-left: 0%;
+  }
+  #paymentradio {
+    transform: scale(3);
+  }
+  /*---------------- 1.6 MOBILE FOR CONFIRMATION --------------*/
+  #order-confirmation {
+    font-size: 32px;
+  }
+  #order-text {
+    font-size: 26px;
+  }
+  #popup-button {
+    font-size: 26px;
+  }
+  .confirmation-basket-labels {
+    visibility: hidden;
+    display: none;
+  }
+  #order-hidden {
+    visibility: visible;
+    display: inline-block;
+    font-size: 32px;
+    margin-top: 26px;
+    width: 98%;
+    border-bottom: 1px solid #ccc;
+  }
+  .myorder {
+    width: 98%;
+  }
+  .confirmation-product-details {
+    font-size: 32px;
+    width: 100%;
+    margin-bottom: 3%;
+  }
+  .confirmation-basket-product {
+    border-bottom: 1px double #00a100;
+  }
+  #product-title {
+    font-size: 33px;
+  }
+  #product-quantity {
+    visibility: visible;
+    display: inline-block;
+    margin-left: 10%;
+    float: left;
+    font-size: 28px;
+    font-weight: 700;
+  }
+  #product-price {
+    visibility: visible;
+    display: inline-block;
+    float: right;
+    margin-right: 15%;
+    font-size: 28px;
+    font-weight: 700;
+  }
+  .product-titles {
+    visibility: visible;
+    display: inline-block;
+    width: 98%;
+    border-bottom: 1px solid #ccc;
+  }
+  .myorder-quantity {
+    font-size: 28px;
+    margin-left: 10%;
+  }
+  #quantity-id {
+    font-size: 28px;
+    margin-left: 31%;
+    margin-top: 10px;
+  }
+  #line-total-p {
+    font-size: 28px;
+    margin-left: -72%;
+    margin-top: 10px;
+  }
+  .right-side {
+    width: 98%;
+    display: inline-grid;
+    margin-right: 1%;
+  }
+  .print {
+    width: 98%;
+    float: none;
+    height: 80px;
+    font-size: 32px;
+    margin-top: 7%;
+  }
+  #vat-header {
+    font-size: 28px;
+  }
+  #reference-number {
+    font-size: 32px;
+    text-align: left;
+    margin-top: -3%;
+  }
 }
 
-@media screen and (max-width: 640px) {
-   aside,
-   .basket,
-   .summary,
-   .item,
-   .remove {
-      width: 100%;
-   }
-   .basket-labels {
-      display: none;
-   }
-   .basket-module {
-      margin-bottom: 1rem;
-   }
-   .item {
-      margin-bottom: 1rem;
-   }
-   .product-image {
-      width: 100%;
-   }
-   .product-details {
+
+/*------------- 2. MEDIA FOR MAX-DEVICE-WIDTH: 640px --------------*/
+
+@media only screen and (max-device-width: 640px) {
+  aside,
+  .summary,
+  .item,
+  .remove {
+    width: 100%;
+  }
+  .basket {
+    width: 55%;
+  }
+  .basket-labels {
+    display: none;
+  }
+  .basket-module {
+    margin-bottom: 1rem;
+  }
+  .item {
+    margin-bottom: 1rem;
+  }
+  .product-image {
+    width: 100%;
+  }
+  /*.product-details {
       width: 60%;
-   }
-   .price,
-   .subtotal {
-      width: 33%;
-   }
-   .quantity {
-      text-align: center;
-      width: 34%;
-   }
-   .quantity-field {
-      float: none;
-   }
-   .remove {
-      bottom: 0;
-      text-align: left;
-      margin-top: 0.75rem;
-      position: relative;
-   }
-   .remove button {
-      padding: 0;
-   }
-   .summary {
-      margin-top: 1.25rem;
-      position: relative;
-   }
+   }*/
+  .price,
+  .subtotal {
+    width: 33%;
+  }
+  .quantity {
+    text-align: center;
+    width: 34%;
+  }
+  .quantity-field {
+    float: none;
+  }
+  .remove {
+    bottom: 0;
+    text-align: left;
+    margin-top: 0.75rem;
+    position: relative;
+  }
+  .remove button {
+    padding: 0;
+  }
+  .summary {
+    margin-top: 1.25rem;
+    position: relative;
+  }
+  /*------------- 2.1 MOBILE FOR POP-UP CONFIRMATION ------------*/
+  #dialogoverlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+  #dialogbox {
+    left: 7%;
+    top: 30%;
+    width: 85%;
+    height: 620px;
+  }
+  #close-popup {
+    font-size: 40px;
+  }
+  #saved-text {
+    font-size: 40px;
+  }
+  #popup-description {
+    font-size: 26px;
+  }
+  .box-text {
+    height: 385px;
+  }
+  #tellworld-span {
+    font-size: 30px;
+  }
+  #share-text {
+    font-size: 22px;
+  }
+  #myTextarea {
+    height: 100px;
+    margin-top: 4%;
+  }
+  #share-header {
+    font-size: 18px;
+  }
+  .dialog-social {
+    margin-top: 4%;
+  }
+  #facebook-button,
+  #twitter-button,
+  #email-button {
+    font-size: 18px;
+    font-weight: 700;
+    height: 35px;
+    padding: 10px;
+  }
 }
+
+
+/*--------------- 3. MEDIA FOR MIN-WIDTH: 641px and MAX-WIDTH: 960px ----------------*/
 
 @media screen and (min-width: 641px) and (max-width: 960px) {
-   aside {
-      padding: 0 1rem 0 0;
-   }
-   .summary {
-      width: 28%;
-   }
-   .basket-labels {
-      display: none;
-   }
+  aside {
+    padding: 0 1rem 0 0;
+  }
+  .summary {
+    width: 28%;
+  }
+  .basket-labels {
+    display: none;
+  }
+  #dialogoverlay {
+    height: 100%;
+    width: 100%;
+  }
 }
+
+
+/*--------------- 4. MEDIA FOR MAX-WIDTH: 960px ----------------*/
 
 @media screen and (max-width: 960px) {
-   main {
-      width: 100%;
-   }
-   .product-details {
-      padding: 0 1rem;
-   }
+  main {
+    width: 100%;
+  }
+  .product-details {
+    padding: 0 1rem;
+  }
+  #dialogoverlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+  #dialogbox {
+    left: 25%;
+    top: 30%;
+    width: 50%;
+    height: 405px;
+  }
+  #close-popup {
+    font-size: 40px;
+  }
 }
 
 
-/*------------------------ END OF 09. For Mobiles ------------------------*/
+/*--------------- 5. MEDIA FOR MAX-WIDTH: 1200px ----------------*/
+
+@media screen and (min-width: 1200px) {
+  #dialogoverlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+  #dialogbox {
+    left: 24%;
+    top: 20%;
+    width: 50%;
+    height: 405px;
+  }
+  #close-popup {
+    font-size: 25px;
+  }
+  #popup-description {
+    font-size: 12px;
+  }
+}
+
+
+/*--------------- 6. MEDIA FOR MAX-WIDTH: 1400px ----------------*/
+
+@media screen and (min-width: 1400px) {
+  #dialogoverlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+  #dialogbox {
+    left: 24%;
+    top: 23%;
+    width: 50%;
+    height: 405px;
+  }
+  #close-popup {
+    font-size: 25px;
+  }
+  #popup-description {
+    font-size: 12px;
+  }
+}
+
+
+/*--------------- 7. MEDIA FOR MAX-WIDTH: 1600px ----------------*/
+
+@media screen and (min-width: 1600px) {
+  #dialogoverlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+  #dialogbox {
+    left: 25%;
+    top: 24%;
+    width: 48%;
+    height: 420px;
+  }
+  #close-popup {
+    font-size: 25px;
+  }
+  #popup-description {
+    font-size: 14px;
+  }
+  #share-text {
+    font-size: 14px;
+  }
+  #myTextarea {
+    height: 80px;
+    font-size: 14px;
+  }
+  #share-header {
+    font-size: 14px;
+  }
+}
+
+
+/*---------------- 8. MEDIA FOR MAX-WIDTH: 1900px --------------- */
+
+@media screen and (min-width: 1900px) {
+  #dialogoverlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+  #dialogbox {
+    left: 31%;
+    top: 28%;
+    width: 37%;
+    height: 450px;
+  }
+  #close-popup {
+    font-size: 25px;
+  }
+  #popup-description {
+    font-size: 16px;
+  }
+  .box-text {
+    height: 290px;
+  }
+  #share-text {
+    font-size: 16px;
+  }
+  #myTextarea {
+    height: 88px;
+    font-size: 16px;
+  }
+  #share-header {
+    font-size: 16px;
+  }
+}
+
+
+/*------------------------ END OF 09. For Mobiles ------------------------

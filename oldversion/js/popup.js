@@ -1,5 +1,3 @@
-// ---------- THIS IS FOR THE POPUP CONFIRMATION ----------
-
 function CustomAlert() {
    this.performCustomAlert = function (dialog) {
       var windowWidth = window.innerWidth;

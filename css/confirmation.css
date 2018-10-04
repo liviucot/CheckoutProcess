@@ -1,98 +1,264 @@
 /*---------------- 08. Confirmation Section - FIFTH FIELDSET -----------------*/
 
 .confirmation-basket-labels {
-   margin-top: 5%;
-   width: 100%;
-   float: left;
-   border-bottom: 1px solid #ccc;
-   margin-top: 15px;
+  margin-top: 5%;
+  width: 100%;
+  float: left;
+  border-bottom: 1px solid #ccc;
+  margin-top: 15px;
 }
 
 .confirmation-basket-product {
-   width: 100%;
-   float: left;
-   border-bottom: 1px solid #ccc;
-   padding: 40px 0px 35px;
-   position: relative;
+  width: 100%;
+  float: left;
+  border-bottom: 1px solid #ccc;
+  padding: 40px 0px 35px;
+  position: relative;
 }
 
 .confirmation-product-details {
-   float: left;
-   padding: 0 1.5rem;
-   -webkit-box-sizing: border-box;
-   -moz-box-sizing: border-box;
-   box-sizing: border-box;
-   width: 60%;
+  float: left;
+  padding: 0 1.5rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 60%;
 }
 
 .order-summary-total {
-   width: 100%;
-   margin-top: 1%;
+  width: 100%;
+  margin-top: 1%;
 }
 
 .myorder {
-   width: 55%;
-   float: left;
+  width: 55%;
+  float: left;
 }
 
 .myorder-heading {
-   padding-left: 0;
-   -webkit-box-sizing: border-box;
-   -moz-box-sizing: border-box;
-   box-sizing: border-box;
-   font-size: 16px;
-   font-weight: 800;
+  padding-left: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-weight: 800;
 }
 
 .myorder-quantity {
-   width: 15%;
-   float: left;
-   font-size: 16px;
-   font-weight: 800;
+  width: 15%;
+  float: left;
+  font-size: 16px;
+  font-weight: 800;
 }
 
 .line-total {
-   width: 15%;
-   float: right;
-   font-size: 16px;
-   font-weight: 800;
+  width: 15%;
+  float: right;
+  font-size: 16px;
+  font-weight: 800;
 }
 
 #line-total-p {
-   font-size: 15px;
-   margin-left: 20px;
+  font-size: 15px;
+  margin-left: 20px;
 }
 
 #quantity-id {
-   margin-left: 24px;
-   font-size: 15px;
+  margin-left: 24px;
+  font-size: 15px;
 }
 
 #popup-button {
-   font-size: 14px;
-   background-color: transparent;
-   color: #00a100;
-   text-decoration: underline;
+  font-size: 14px;
+  background-color: transparent;
+  color: #00a100;
+  text-decoration: underline;
 }
 
 #order-hidden {
-   visibility: hidden;
-   display: none;
+  visibility: hidden;
+  display: none;
 }
 
 #product-quantity {
-   visibility: hidden;
-   display: none;
+  visibility: hidden;
+  display: none;
 }
 
 #product-price {
-   visibility: hidden;
-   display: none;
+  visibility: hidden;
+  display: none;
 }
 
 .product-titles {
-   visibility: hidden;
-   display: none;
+  visibility: hidden;
+  display: none;
+}
+
+.print {
+  float: right;
+  margin-top: 10%;
+  width: 21%;
+  margin-right: -68%;
+  display: block;
+  background: #00a100;
+  font-weight: bold;
+  border-radius: 1px;
+  color: white;
+  border: 0 none;
+  cursor: pointer;
+  padding: 10px 5px;
+  font-size: 14px;
+  margin-bottom: 4%;
+}
+
+.print:hover {
+  box-shadow: 0 0 0 2px white, 0 0 0 3px #00a100;
+}
+
+
+/*------------------------ 03. Popup for Confirmation ------------------------*/
+
+#dialogoverlay {
+  display: none;
+  opacity: 0.5;
+  /*so that user can see through it*/
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background: black;
+  z-index: 10;
+  height: 100%;
+  width: 100%;
+}
+
+#dialogbox {
+  display: none;
+  position: fixed;
+  background: #ffffff;
+  border-radius: 1px;
+  border: 0.5px solid #ccc;
+  z-index: 10;
+  left: 26%;
+  top: 30%;
+  width: 45%;
+  height: 400px;
+}
+
+#close-popup {
+  float: right;
+  background-color: transparent;
+  color: black;
+}
+
+#saved-text {
+  text-align: center;
+  font-size: 22px;
+  color: #00a100;
+  margin-top: 3%;
+  font-weight: 800;
+  margin-left: 25px;
+}
+
+#popup-description {
+  text-align: center;
+  font-size: 12px;
+  color: black;
+  margin-top: 1%;
+  font-weight: 500;
+  width: 94%;
+  margin-left: 3%;
+}
+
+.box-text {
+  width: 95%;
+  height: 275px;
+  margin-left: 2%;
+  height: ;
+  margin-top: 2%;
+  border-style: double;
+}
+
+#tellworld {
+  width: 82%;
+  text-align: center;
+  border-bottom: 1px solid #000;
+  line-height: 0.1em;
+  margin: 4% 9% 20px;
+}
+
+#tellworld-span {
+  background: #fff;
+  padding: 0 10px;
+  font-size: 22px;
+  font-weight: 550;
+}
+
+#share-text {
+  width: 82%;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+  margin-left: 9%;
+}
+
+#myTextarea {
+  margin-left: 9%;
+  margin-right: 0px;
+  margin-top: 3%;
+  width: 82%;
+  height: 88px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  resize: none;
+  border: 1px solid #ccc;
+}
+
+.dialog-social {
+  margin-top: 2%;
+  width: 90%;
+  display: inline-flex;
+  margin-left: 11%;
+}
+
+#share {
+  width: 27%;
+}
+
+#share-header {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+#facebook {
+  width: 23%;
+}
+
+#twitter {
+  width: 20%;
+}
+
+#emailsh {
+  width: 20%;
+}
+
+#facebook-button,
+#twitter-button {
+  width: 75%;
+  font-size: 10px;
+  height: 25px;
+  padding: 6px;
+  margin-top: -2%;
+  background: #00a100;
+}
+
+#email-button {
+  width: 75%;
+  font-size: 10px;
+  height: 25px;
+  padding: 6px;
+  margin-top: -2%;
+  background: #00a100;
 }
 
 

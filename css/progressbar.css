@@ -1,71 +1,172 @@
 /*--------------------------- 02. Progressbar  -----------------------------*/
 
-#progressbar {
-   margin-bottom: 30px;
-   overflow: hidden;
-   /*CSS counters to number the steps*/
-   counter-reset: step;
-   text-align: center;
+#msform #form {
+  background: white;
+  border: 0 none;
+  border-radius: 3px;
+  box-sizing: border-box;
+  width: 122%;
+  margin: 3% -10%;
+  position: relative;
 }
 
-#progressbar li {
-   list-style-type: none;
-   color: #bbb7b7;
-   font-weight: 600;
-   white-space: nowrap;
-   font-size: 17px;
-   width: 19.33%;
-   float: left;
-   position: relative;
+.progressbar {
+  margin-bottom: 30px;
+  margin-top: -10px;
+  counter-reset: step;
+  text-align: center;
 }
 
-#progressbar li:before {
-   content: counter(step);
-   counter-increment: step;
-   z-index: 1;
-   width: 39px;
-   line-height: 39px;
-   left: 50%;
-   top: 50%;
-   display: block;
-   font-size: 18px;
-   font-weight: 550;
-   background-color: #fff;
-   color: #ccc;
-   border: 2px solid #ccc;
-   border-radius: 50%;
-   margin: 0 auto 5px auto;
+.progressbar .nav-tabs {
+  position: relative;
+  margin: 10px auto;
+  margin-bottom: 0;
+  border: none;
 }
 
-
-/*---------------- PROGRESS BAR CONNECTORS ---------------*/
-
-#progressbar li:after {
-   content: '';
-   width: 100%;
-   height: 2px;
-   color: #00a100;
-   background-color: #ccc;
-   position: absolute;
-   left: -50%;
-   top: 31%;
-   z-index: -1;
-   /*put it behind the numbers*/
+.progressbar>div.progressbar-inner {
+  position: relative;
 }
 
-#progressbar li:first-child:after {
-   /*connector not needed before the first step*/
-   content: none;
+.connecting-line {
+  height: 2.2px;
+  background: #e0e0e0;
+  position: absolute;
+  width: 80%;
+  margin: -2px auto;
+  left: 0;
+  right: 0;
+  top: 41%;
+  z-index: 1;
 }
 
-#progressbar li.active:before {
-   background-color: #fff;
-   color: #00a100;
-   border: 2px solid #00a100;
+.progressbar .nav-tabs>li.active>a,
+.progressbar .nav-tabs>li.active>a:hover,
+.progressbar .nav-tabs>li.active>a:focus {
+  color: #555555;
+  cursor: default;
+  border: 0;
+  border-bottom-color: transparent;
 }
 
-#progressbar li.active:after {
-   background: #00a100;
+span.round-tab {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  display: inline-block;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 2px solid #e0e0e0;
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 550;
+  margin: 0 auto 5px auto;
+}
+
+span.round-tab i {
+  color: #555555;
+}
+
+.progressbar li.active span.round-tab {
+  background-color: #fff;
+  color: #00a100;
+  border: 2px solid #00a100;
+}
+
+.progressbar li.active span.round-tab i {
+  color: #00a100;
+}
+
+.progressbar li.active #label {
+  color: #00a100;
+}
+
+span.round-tab:hover {
+  color: #00a100;
+  border: 2px solid #00a100;
+}
+
+.progressbar li {
+  width: 20%;
+  font-size: 17px;
+  list-style-type: none;
+  color: #ccc;
+  font-weight: 550;
+  white-space: nowrap;
+  font-size: 17px;
+  width: 19.33%;
+  float: left;
+  position: relative;
+}
+
+.progressbar li.active:after {
+  content: " ";
+  position: absolute;
+  left: 46%;
+  opacity: 1;
+  margin: 0 auto;
+  color: green;
+}
+
+.progressbar .nav-tabs>li a {
+  width: 39px;
+  height: 39px;
+  margin: 12px auto;
+  border-radius: 50%;
+  padding: 0;
+}
+
+.fade {
+  opacity: 0;
+  -webkit-transition: opacity .15s linear;
+  transition: .15s linear;
+}
+
+.fade.in {
+  opacity: 1;
+  -webkit-transition: opacity .35s linear;
+  transition: .35s linear;
+}
+
+#label {
+  font-size: 17px;
+  font-weight: 550;
+  margin-left: 7px;
+}
+
+.progressbar .tab-pane {
+  position: relative;
+  padding-top: 50px;
+}
+
+.nav>li>a {
+  color: green;
+}
+
+@media( max-width: 585px) {
+  .progressbar {
+    width: 90%;
+    height: auto !important;
+  }
+  span.round-tab {
+    font-size: 16px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+  }
+  .progressbar .nav-tabs>li a {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+  }
+  .progressbar li.active:after {
+    content: " ";
+    position: absolute;
+    left: 35%;
+  }
 }
 
 

@@ -146,29 +146,6 @@
    box-shadow: 0 0 0 2px white, 0 0 0 3px #656565;
 }
 
-/* Back to basket button */
-
-#back-button {
-   width: 19%;
-   height: 42px;
-   background: #656565;
-   font-weight: bold;
-   color: white;
-   border: 0 none;
-   border-radius: 1px;
-   cursor: pointer;
-   padding: 10px 5px;
-   font-size: 14px;
-   float: left;
-   margin-left: 0%;
-   margin-top: -8%;
-   display: block;
-}
-
-#back-button:hover {
-   box-shadow: 0 0 0 2px white, 0 0 0 3px #656565;
-}
-
 
 /*-------- THIS IS FOR SIGNIN & PAYMENT SECTION ---------*/
 
@@ -204,7 +181,6 @@
 
 .signin-button {
    float: right;
-   height: 42px;
    margin-top: 35%;
    width: 9%;
    margin-right: -9%;

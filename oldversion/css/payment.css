@@ -112,11 +112,6 @@
    font-weight: 700;
 }
 
-#order-note{
-   border: 2px solid #ccc;
-   resize: none;
-}
-
 .proceed-order {
    float: right;
    margin-top: 54%;
@@ -136,30 +131,6 @@
 .proceed-order:hover {
    box-shadow: 0 0 0 2px white, 0 0 0 3px #00a100;
 }
-
-#back-button-payment{
-   width: 19%;
-   height: 42px;
-   background: #656565;
-   font-weight: bold;
-   color: white;
-   border: 0 none;
-   border-radius: 1px;
-   cursor: pointer;
-   padding: 10px 5px;
-   font-size: 14px;
-   float: left;
-   margin-left: -47%;
-   margin-top: 85%;
-   margin-bottom: 4%;
-   display: block;
-}
-
-#back-button-payment:hover {
-   box-shadow: 0 0 0 2px white, 0 0 0 3px #656565;
-}
-
-
 
 
 /*------------------------ END OF 07. Payment ------------------------*/
