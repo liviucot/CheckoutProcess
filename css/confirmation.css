@@ -97,7 +97,7 @@
 
 .print {
   float: right;
-  margin-top: 10%;
+  margin-top: 12%;
   width: 21%;
   margin-right: -68%;
   display: block;
@@ -109,7 +109,7 @@
   cursor: pointer;
   padding: 10px 5px;
   font-size: 14px;
-  margin-bottom: 4%;
+  margin-bottom: 12%;
 }
 
 .print:hover {

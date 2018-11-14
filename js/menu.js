@@ -24,14 +24,16 @@ $(document).ready(function () {
     var $active = $('.progressbar .nav-tabs li.active');
     $active.next().removeClass('disabled');
     nextTab($active);
-
+    window.scrollTo(0, 0);
   });
+
 
   // PREVIOUS STEP METHOD - WHEN BUTTON CLICKED TAKES TO THE PREVIOUS SECTION
   $(".prev-step").click(function (e) {
 
     var $active = $('.progressbar .nav-tabs li.active');
     prevTab($active);
+    window.scrollTo(0, 0);
 
   });
 });

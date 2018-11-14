@@ -1,48 +1,48 @@
 /*---------------- 07. Payment Section - FOURTH FIELDSET -----------------*/
 
 .left-side {
-   width: 50%;
-   float: left;
+  width: 50%;
+  float: left;
 }
 
 .right-side {
-   width: 38%;
-   float: right;
-   text-align: right;
-   font-size: 14px;
-   font-weight: 550;
+  width: 38%;
+  float: right;
+  text-align: right;
+  font-size: 14px;
+  font-weight: 550;
 }
 
 #delivery-address-header,
 #order-totals-header,
 #order-confirmation {
-   font-weight: bold;
-   color: black;
-   margin-bottom: 5%;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 5%;
 }
 
 #order-text {
-   font-size: 14px;
+  font-size: 14px;
 }
 
 .first-name {
-   float: left;
-   display: block;
-   margin-bottom: 5%;
+  float: left;
+  display: block;
+  margin-bottom: 5%;
 }
 
 .last-name {
-   float: right;
-   display: block;
-   margin-bottom: 5%;
+  float: right;
+  display: block;
+  margin-bottom: 5%;
 }
 
 .company-name {
-   display: block;
-   margin-top: -5%;
-   margin-bottom: 5%;
-   float: left;
-   width: 106%;
+  display: block;
+  margin-top: -5%;
+  margin-bottom: 5%;
+  float: left;
+  width: 106%;
 }
 
 .line-1,
@@ -52,20 +52,20 @@
 .country,
 .email,
 .tel-mobile {
-   display: block;
-   margin-top: -5%;
-   margin-bottom: 5%;
-   float: left;
-   width: 106%;
+  display: block;
+  margin-top: -5%;
+  margin-bottom: 5%;
+  float: left;
+  width: 106%;
 }
 
 #firstname {
-   width: 77%;
+  width: 77%;
 }
 
 #lastname {
-   margin-left: -15%;
-   width: 77%;
+  margin-left: -15%;
+  width: 77%;
 }
 
 #companyname,
@@ -76,90 +76,88 @@
 #country,
 #email,
 #telmobile {
-   width: 79%;
+  width: 79%;
 }
 
 .totals-order {
-   width: 90%;
-   display: grid;
-   font-weight: 560;
+  width: 90%;
+  display: grid;
+  font-weight: 560;
 }
 
 .order-totals-id {
-   float: left;
-   min-height: 400px;
-   width: 41%;
-   margin-left: 3%;
-   color: black;
+  float: left;
+  min-height: 400px;
+  width: 41%;
+  margin-left: 3%;
+  color: black;
 }
 
 #payment-method {
-   float: left;
-   font-size: 14px;
-   font-weight: 700;
-   margin-bottom: 3%;
+  float: left;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 3%;
 }
 
 .payment-radio-buttons {
-   float: left;
-   margin-bottom: 5%;
-   font-weight: 700;
+  float: left;
+  margin-bottom: 5%;
+  font-weight: 700;
 }
 
 .order-note {
-   float: left;
-   margin-bottom: 5%;
-   font-weight: 700;
+  float: left;
+  margin-bottom: 5%;
+  font-weight: 700;
 }
 
-#order-note{
-   border: 2px solid #ccc;
-   resize: none;
+#order-note {
+  border: 2px solid #ccc;
+  resize: none;
 }
 
 .proceed-order {
-   float: right;
-   margin-top: 54%;
-   width: 19.5%;
-   margin-right: -41%;
-   display: block;
-   background: #00a100;
-   font-weight: bold;
-   color: white;
-   border-radius: 1px;
-   border: 0 none;
-   cursor: pointer;
-   padding: 10px 5px;
-   font-size: 14px;
+  float: right;
+  margin-top: 53%;
+  width: 19.5%;
+  margin-right: -41%;
+  display: block;
+  background: #00a100;
+  font-weight: bold;
+  color: white;
+  border-radius: 1px;
+  border: 0 none;
+  cursor: pointer;
+  padding: 10px 5px;
+  font-size: 14px;
 }
 
 .proceed-order:hover {
-   box-shadow: 0 0 0 2px white, 0 0 0 3px #00a100;
+  box-shadow: 0 0 0 2px white, 0 0 0 3px #00a100;
 }
 
-#back-button-payment{
-   width: 19%;
-   height: 42px;
-   background: #656565;
-   font-weight: bold;
-   color: white;
-   border: 0 none;
-   border-radius: 1px;
-   cursor: pointer;
-   padding: 10px 5px;
-   font-size: 14px;
-   float: left;
-   margin-left: -47%;
-   margin-top: 85%;
-   margin-bottom: 4%;
-   display: block;
+#back-button-payment {
+  width: 19%;
+  height: 42px;
+  background: #656565;
+  font-weight: bold;
+  color: white;
+  border: 0 none;
+  border-radius: 1px;
+  cursor: pointer;
+  padding: 10px 5px;
+  font-size: 14px;
+  float: left;
+  margin-left: -47%;
+  margin-top: 86%;
+  margin-bottom: 4.5%;
+  display: block;
 }
 
 #back-button-payment:hover {
-   box-shadow: 0 0 0 2px white, 0 0 0 3px #656565;
+  box-shadow: 0 0 0 2px white, 0 0 0 3px #656565;
 }
-
-
 
 
 /*------------------------ END OF 07. Payment ------------------------*/

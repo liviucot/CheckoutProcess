@@ -1,25 +1,24 @@
 <!---------------------------------------------------------------------
-
-   FRONT-END OF THE CHECKOUT PROCESS - THIS IS THE HOMEPAGE WITH HTML
-
+  FRONT-END OF THE CHECKOUT PROCESS - THIS IS THE HOMEPAGE WITH HTML
+  
   [Table of contents]
-
+  
   1. CSS LINKS
   2. MULTI STEP FORM
-    2.1 PROGRESS BAR MENU
+   2.1 PROGRESS BAR MENU
   3. FORM STEPS CONTENT
-    3.1 BASKET - STEP 1
-    3.2 SIGN IN - STEP 2
-    3.3 DELIVERY - STEP 3
-    3.4 PAYMENT - STEP 4
-    3.5 CONFIRMATION - STEP 5
+   3.1 BASKET - STEP 1
+   3.2 SIGN IN - STEP 2
+   3.3 DELIVERY - STEP 3
+   3.4 PAYMENT - STEP 4
+   3.5 CONFIRMATION - STEP 5
   4. JAVASCRIPT LINKS
   
--------------------------------------------------------------------------->
-
+  -------------------------------------------------------------------------->
 <!DOCTYPE html>
 <html>
   <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Checkout Process</title>
     <!--------------- 1. CSS LINKS ---------------->
     <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -33,6 +32,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
+    <div class="dfk-header">
+      <div id="headerS">
+        <img src="img/headerS.png" id="headerS">
+      </div>
+      <div id="headerTablet">
+        <img src="img/headerTablet.png" id="headerTablet">
+      </div>
+      <div id="headerLaptop">
+        <img src="img/headerLaptop.png" id="headerLaptop">
+      </div>
+      <div id="headerL">
+        <img src="img/headerL.png" id="headerL">
+      </div>
+      <div id="headerXL">
+        <img src="img/headerXL.png" id="headerXL">
+      </div>
+    </div>
     <main>
       <!--------------- 2. MULTI STEP FORM ---------------->
       <div id="msform">
@@ -70,7 +86,7 @@
             <!--------------- 3.1 BASKET - STEP 1 ---------------->
             <div class="tab-pane fade in active" role="tabpanel" id="step1">
               <!--------------- TOP CHOOSE DELIVERY BUTTON ---------------->
-              <input type="button" name="next" class="next top-choose-delivery-button next-step" style="" value="Choose Delivery" />
+              <button type="button" name="next" class="next top-choose-delivery-button next-step" value="Choose Delivery">Choose Delivery</button>
               <div class="basket" style="margin-top: 15px">
                 <div class="summary-total-items">Basket - <span class="total-items"></span> items</div>
               </div>
@@ -198,9 +214,9 @@
                 </div>
               </div>
               <!--------------- 3.1.3 BOTTOM BUTTONS ---------------->
-              <input type="button" name="next" class="next choose-delivery-button next-step" value="Choose Delivery" />
-              <button class="shopping-button">Continue Shopping</button>
-              <button class="shopping-button">Save Quote</button>
+              <button type="button" name="next" class="next choose-delivery-button next-step" value="Choose Delivery" onclick="window.scrollTo(0, 0);">Choose Delivery</button>
+              <button class="shopping-button" onclick="window.scrollTo(0, 0);">Continue Shopping</button>
+              <button class="shopping-button" onclick="window.scrollTo(0, 0);">Save Quote</button>
             </div>
             <!--------------- 3.2 SIGN IN - STEP 2 ---------------->
             <div class="tab-pane fade in" role="tabpanel" id="step2">
@@ -229,9 +245,9 @@
                 </div>
               </div>
               <!----------------- 3.2.3 BUTTONS ---------------------->
-              <input type="button" name="next" class="next signin-button next-step" value="Sign In">
+              <button type="button" name="next" class="next signin-button next-step" value="Sign In">Sign In</button>
               <button class="next continue-as-guest next-step">Continue as Guest</button>
-              <input type="button" name="previous" class="previous back-button prev-step" value="Back" id="back-button"/>
+              <button type="button" name="previous" class="previous back-button prev-step" value="Back" id="back-button">Back</button>
             </div>
             <!--------------- 3.3 DELIVERY - STEP 3 ---------------->
             <div class="tab-pane fade in" role="tabpanel" id="step3">
@@ -256,7 +272,6 @@
               <!--------------- 3.3.2 DELIVERY CONTENTS SPLITTING IN 2 PARTS ---------------->
               <div class="flex-3-cols">
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
                 <!--------------------- 3.3.3 LABEL FOR DPD DELIVERY -------------->
                 <label id="delivery-option1-label" for="delivery-option1">
                   <div class="radio-logo" data-doc="1">
@@ -275,7 +290,6 @@
                     <h3>£9.99</h3>
                   </div>
                 </label>
-
                 <!--------------------- 3.3.4 LABEL FOR TNT DELIVERY -------------->
                 <label id="delivery-option2-label" for="delivery-option2">
                   <div class="radio-logo" data-doc="2">
@@ -293,7 +307,6 @@
                     <h3>£6.99</h3>
                   </div>
                 </label>
-
                 <!--------------------- 3.3.5 LABEL FOR MyHERMES DELIVERY -------------->
                 <label id="delivery-option3-label" for="delivery-option3">
                   <div class="radio-logo" data-doc="3">
@@ -310,7 +323,6 @@
                     <h3>£3.99</h3>
                   </div>
                 </label>
-
                 <!--------------------- 3.3.6 LABEL FOR FREE DELIVERY -------------->
                 <label id="delivery-option4-label" for="delivery-option4" style="display: inline-block; padding: 0px 0 12px 35px;">
                   <div class="top-bar">
@@ -330,7 +342,6 @@
                     <h3>FREE</h3>
                   </div>
                 </label>
-
                 <!--------------------- 3.3.7 LABEL FOR Season Ticket DELIVERY -------------->
                 <label id="delivery-option5-label" for="delivery-option5">
                   <div class="radio-logo" data-doc="5">
@@ -386,10 +397,10 @@
               </div>
               <br>
               <!------------- 3.3.10 BOTTOM BUTTONS ------------->
-              <input type="button" name="next" class="next proceed-to-payment next-step" value="Proceed to Payment" />
-              <input type="button" name="previous" class="previous back-to-cart prev-step" value="Back" id="back-to-cart-id"/>
+              <button type="button" name="next" class="next proceed-to-payment next-step" value="Proceed to Payment" onclick="window.scrollTo(0, 0);">Proceed to Payment</button>
+              <button type="button" name="previous" class="previous back-to-cart prev-step" value="Back" id="back-to-cart-id" onclick="window.scrollTo(0, 0);">Back</button>
               <br>
-              <div id="white-space" style="min-height: 10px;"><br><br><br></div>
+              <div class="empty-space"></div>
             </div>
             <!--------------- 3.4 PAYMENT - STEP 4 ---------------->
             <div class="tab-pane fade in" role="tabpanel" id="step4">
@@ -479,8 +490,9 @@
                 </div>
               </div>
               <!----------------- 3.4.1 BOTTOM BUTTONS ---------------------->
-              <input type="button" name="next" class="next proceed-order next-step" value="Proceed with Order">
-              <input type="button" name="previous" class="previous back-button-payment prev-step" value="Back" id="back-button-payment"/>
+              <button type="button" name="next" class="next proceed-order next-step" value="Proceed with Order" onclick="window.scrollTo(0, 0);">Proceed with Order</button>
+              <button type="button" name="previous" class="previous back-button-payment prev-step" value="Back" id="back-button-payment" onclick="window.scrollTo(0, 0);">Back</button>
+              <div class="empty-space"></div>
             </div>
             <!--------------- 3.5 CONFIRMATION - STEP 5 ---------------->
             <div class="tab-pane fade in" role="tabpanel" id="complete">
@@ -640,7 +652,7 @@
                     </div>
                     <br>
                     <div id="reference-number" style="float: right;"><strong>Reference Number</strong> - DFK091337838</div>
-                    <input type="button" name="next" class="print" value="Print">
+                    <button type="button" name="next" class="print" value="Print">Print</button>
                   </div>
                   <div class="clearfix"></div>
                 </div>
@@ -650,6 +662,23 @@
         </div>
       </div>
     </main>
+    <div class="dfk-footer">
+      <div id="footerS">
+        <img src="img/footerS.png" id="footerS">
+      </div>
+      <div id="footerTablet">
+        <img src="img/footerTablet.png" id="footerTablet">
+      </div>
+      <div id="footerLaptop">
+        <img src="img/footerLaptop.png" id="footerLaptop">
+      </div>
+      <div id="footerL">
+        <img src="img/footer.png" id="footerL">
+      </div>
+      <div id="footerXL">
+        <img src="img/footerXL.png" id="footerXL">
+      </div>
+    </div>
     <!--------------- 4. JAVASCRIPT LINKS ---------------->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
